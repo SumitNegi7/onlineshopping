@@ -1,0 +1,163 @@
+.pcart-list-container {
+  display: flex;
+  flex-direction: column;
+}
+select {
+  height: 1.5rem;
+}
+.pcart {
+  max-width: 98vw;
+
+  box-sizing: border-box;
+}
+
+.pcart-btn-delete {
+  background: none;
+  border: none;
+  height: 2rem;
+  font-weight: 200;
+  font-size: 1.8rem;
+}
+.pcart-content {
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-action {
+  margin-left: 5rem;
+}
+
+.pcart-btn-delete {
+  margin-left: 1rem;
+}
+
+.pcart-name {
+  flex-basis: 30vw;
+}
+
+.iline {
+  width: 90vw;
+  height: 1px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background: black;
+}
+
+.cart-action {
+  font-size: 1.2rem;
+  position: absolute;
+  margin-bottom: 5rem;
+  width: 90vw;
+  overflow-x: hidden;
+}
+
+.btn-cart {
+  left: 70%;
+
+  margin-bottom: 2rem;
+}
+
+.csub {
+  position: relative;
+  left: 75%;
+}
+
+.press2 {
+  margin-left: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2.5rem;
+  transform: rotate(270deg);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: #007fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .csub {
+    position: relative;
+    left: 65%;
+  }
+  .btn-cart {
+    left: 70%;
+
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pcart-list-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -1rem;
+  }
+
+  .pcart-btn-delete {
+    margin-left: 1rem;
+  }
+  .pcart {
+    max-width: 98vw;
+    margin-top: -5rem;
+    box-sizing: border-box;
+    height: auto;
+  }
+  .pcart-image {
+    margin-left: -2rem;
+    flex-basis: 12rem;
+  }
+
+  .pcart-content {
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+  }
+
+  .cart-action {
+    margin-left: 5rem;
+  }
+
+  .pcart-btn-delete {
+  }
+
+  .pcart-name {
+    flex-basis: 5;
+  }
+  .pcart-price {
+    margin-left: 0.5rem;
+  }
+
+  .iline {
+    width: 90vw;
+    height: 1px;
+    margin-left: 3rem;
+    margin-right: 6rem;
+    background: black;
+  }
+
+  .cart-action {
+    font-size: 0.7rem;
+    position: absolute;
+
+    width: 80vw;
+    overflow-x: hidden;
+  }
+
+  .btn-cart {
+    font-size: 1rem;
+    left: 60%;
+    margin-bottom: 1rem;
+  }
+
+  .csub {
+    position: relative;
+    left: 1%;
+    font-size: 1.5rem;
+  }
+  .checkout {
+    font-size: 1.4rem;
+  }
+}

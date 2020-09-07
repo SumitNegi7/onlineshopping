@@ -1,0 +1,250 @@
+@media screen and (max-width:8000px){
+    .form{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+}
+
+.container-login {
+    height: 400px;
+    width: 650px;
+    box-shadow: 0px 20px 18px rgb(110, 106, 106);
+    display: flex;
+    border-radius: 10px;
+}
+
+.image-login {
+    flex: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(167, 127, 127, 0.3)), url('https://cdn.vox-cdn.com/thumbor/gudtElwDC6olF3hQooLJYzQqMMU=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/9539669/jbareham_171017_2065_0164.jpg') 50%;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image-login h1 {
+    margin-top: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+
+.content-login {
+    flex: 50%;
+    background-color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-login h1 {
+    padding: 40px;
+    padding-top: 30px;
+    font-family: 'Niconne', cursive;
+    font-size: 20px;
+    color: #c446c9;
+}
+.content1 {
+    flex: 50%;
+    background-color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content1 .h1-login {
+    padding: 0px;
+    padding-top: 10px;
+    font-family: 'Niconne', cursive;
+    font-size: 20px;
+
+    color: #c446c9;
+}
+/* .form-group{
+    display:flex;
+    flex-direction:column;
+align-items: center;
+} */
+
+
+.form-control{
+    width:25rem;
+    padding: 5px;
+    margin-bottom:10px;
+    background-color: salmon;
+    border:1px solid rgb(155, 146, 146);
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+   
+    text-align:center;
+}
+
+
+
+label {
+    font-weight: bold;
+    font-size: small;
+}
+
+
+.fp {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    transition: 0.3s;
+}
+
+.fp:hover {
+    color: #c446c9;
+}
+.form-control{
+    background-color: seagreen;
+}
+.btn-signin{
+    padding: 10px 40px;
+    margin-top: 3rem;
+    border: none;
+    background: linear-gradient(to right, #0038ee, #B06AB3);
+    border-radius: 20px;
+  
+}
+
+
+
+.btn-signin:hover {
+    transform: scale(1.2);
+}
+
+.btn-signin:a {
+    text-decoration: none;
+    color: white;
+}
+}
+
+@media screen and (max-width:767px){
+
+    .form{
+        top: 50%;
+        left: 50%;
+        width: 100vh;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+    .container-login {
+        display: flex;
+        flex-direction:column ;
+        height:75vh;
+        width: 250px;
+        box-shadow: 0px 30px 40px black;
+        display: flex;
+        border-radius: 10px;
+    }
+    
+    .image-login {
+        flex: 33%;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(167, 127, 127, 0.3)), url('https://cdn.vox-cdn.com/thumbor/gudtElwDC6olF3hQooLJYzQqMMU=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/9539669/jbareham_171017_2065_0164.jpg') 50%;
+        background-size: cover;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .image-login h1 {
+        margin-top: 50%;
+        padding-left: 20px;
+        padding-right: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+    
+    
+    
+    .content-login {
+        flex: 50%;
+    
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .content-login h1 {
+        padding: 10px;
+        padding-top: 10px;
+        font-family: 'Niconne', cursive;
+        font-size: 20px;
+        color: #111111;
+    }
+    .content1 {
+        flex: 70%;
+        background-color: white;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .content1 .h1-login {
+        padding: 0px;
+        padding-top: 10px;
+        font-family: 'Niconne', cursive;
+        font-size: 20px;
+        color: #c446c9;
+    }
+    
+    .form-control{
+       
+        width:20rem;
+        padding: 1px;
+        border: none;
+        background-color: rgba(156, 77, 156, 0.3);
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: small;
+        font-family: 'Montserrat', sans-serif;
+        color: #aa38a4;
+        text-align:center;
+    }
+    
+    label {
+        font-weight: bold;
+        font-size: small;
+    }
+    /* }
+    .form-group{
+        padding:;
+    } */
+    #txt:focus {
+        outline: none;
+    }
+    
+    .fp {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: small;
+        transition: 0.3s;
+    }
+    
+    .fp:hover {
+        color: #c446c9;
+    }
+    
+    .btn-signin{
+        padding: 10px 40px;
+        margin-top: 3rem;
+        border: none;
+        background: linear-gradient(to right, #4568DC, #B06AB3);
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+    
+    .btn-signin:hover {
+        transform: scale(1.2);
+    }
+    
+    .btn-signin:a {
+        text-decoration: none;
+        color: white;
+    }
+}

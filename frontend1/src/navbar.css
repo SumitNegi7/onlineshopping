@@ -1,0 +1,150 @@
+.navbar-container {
+  width: 100%;
+
+  /* position: absolute; */
+  margin-top: 2vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* background-color: blue; */
+}
+
+.outer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  letter-spacing: 1px;
+}
+main {
+  /* position: absolute; */
+}
+.logobox {
+  margin-left: 3vh;
+  color: black;
+  font-size: 2rem;
+  font-family: "Satisfy", cursive;
+}
+ion-icon {
+  font-size: 20px;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding-top: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-grow: 3;
+  padding-top: 0;
+  align-items: center;
+}
+.navbar1 {
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-right: 2rem; */
+
+  align-items: center;
+}
+
+li {
+  margin-right: 5rem;
+}
+
+.handburger {
+  display: none;
+}
+.handburger div {
+  width: 25px;
+  height: 2px;
+  background-color: rgb(216, 178, 24);
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* --------------navbar-responsive--------------- */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .outer {
+    background-color: white;
+  }
+  nav {
+    overflow-y: hidden;
+  }
+  .navbar {
+    /* margin-left: 2rem; */
+    position: absolute;
+    left: 0vh;
+    right: 10rem;
+    height: 95vh;
+    top: 5.1vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+    z-index: 10;
+  }
+  .handburger {
+    display: block;
+    z-index: 1;
+  }
+  .one {
+    margin-right: 5rem;
+    color: black;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+}
+
+.navbar-active {
+  transform: translateX(0%);
+}
+
+@keyframes navlinkfade {
+  from {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}

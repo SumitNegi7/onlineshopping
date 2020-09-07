@@ -1,0 +1,170 @@
+.placeorder-container1{
+ 
+    display:flex;
+    width:100vw;
+    justify-content: space-between;
+   
+}
+label{
+    display: inline-block;
+    width: 50px;
+    text-align:justify;
+}
+
+.placeorder001{
+    
+
+}
+.pcart-btn-delete1{
+    margin-left:1rem;
+}
+.pcart1{
+    max-width:98vw;
+    margin-top:-5rem ;
+    box-sizing: border-box;
+    
+}
+.pcart-image1{
+    margin-left: -2rem;
+    flex-basis: 12rem;
+}
+
+.pcart-content1{
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    align-items:center;
+    width: 85%;
+}
+
+.cart-action1{
+    margin-left:5rem;
+}
+
+.pcart-btn-delete1{
+
+}
+
+.pcart-name1{
+    flex-basis: 5;
+   
+}
+.pcart-price1{
+    margin-left:0.5rem;
+}
+
+.iline1{
+    width:90vw;
+    height:1px;
+    margin-left: 3rem;
+    margin-right: 6rem;
+    background:black;
+}
+
+.cart-action1{
+    font-size: 0.7rem;
+    position: absolute;
+
+   width: 80vw;
+   overflow-x: hidden;
+}
+
+.btn-cart1{
+   font-size: 1rem;
+    left:60%;
+    margin-bottom:1rem;
+}
+
+.csub1{
+ 
+     
+       position:relative;
+     left:65%;
+   
+}
+
+.placeorder-action1{
+    width:30vw;
+
+ display: flex;
+ justify-content: center;
+ 
+
+}
+
+.pcart-content1{
+    display: flex;
+    flex-direction: column;
+}
+
+.placeorder-btn1{
+    
+    height: 5.6vh;
+    width: 8vw;
+    border:2px solid #0766b4;
+    background:white ;
+    color:#0766b4;
+    font-size:1.7rem;
+}
+
+.place-order-details{
+    color:grey;
+}
+
+.cart-prod{
+    margin-right:2rem;
+    color:black;
+}
+
+.shipping-det{
+    font-weight:400;
+    color:rgb(85, 69, 69);
+}
+
+
+
+@media screen and (max-width:767px){
+    .placeorder-container1{
+        display: flex;
+ 
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+       
+     
+       
+    }
+
+    .placeorder-action1{
+        margin-left:1rem;
+        width: 80vw;
+    }
+
+    .placeorder-sub{
+        width:80vw;
+        margin-left:5rem;
+    }
+    .placeorder-btn1{
+    
+        height: 6vh;
+        width: 22vw;
+        border:2px solid #0766b4;
+        background:white ;
+        color:#0766b4;
+        font-size:1.2rem;
+        margin-bottom:6vh;
+    }
+
+
+
+.placorder-products1{
+    order:2;
+}
+}
+
+
+.pcart-list-container1{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,47 @@
+.placeorder{
+    display: flex;
+    margin-bottom:5rem;
+    
+    flex-basis: 300px;
+
+}
+.pcart-content1{
+    display:flex;
+    
+}
+
+.placeorder-info{
+    margin-left: 12rem;
+}
+.m{
+    font-weight: 600;
+}
+.cart-list-container{
+margin-top: 2rem;
+}
+.oc-container{
+display: flex;
+flex-wrap: wrap;
+}
+
+@media screen and (max-width:767px){
+    .placeorder-action{
+        display:flex;
+        flex-direction: column;
+    }
+    .m{
+        font-size: 0.5rem;
+    }
+    .shipping-design{
+        font-size: 0.3rem;
+    }
+
+    .placeorder-info {
+        width:40vw;
+    }
+    
+    .cart-prod-apple{
+        font-size: 0.4;
+        font-weight: 100;
+    }
+}

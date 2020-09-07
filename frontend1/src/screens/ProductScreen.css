@@ -1,0 +1,121 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: white;
+}
+
+.qty-prod {
+  margin-top: 1rem;
+}
+select {
+  height: 2.5rem;
+  background: rgb(255, 255, 255);
+
+  border: 0.5px solid rgb(211, 208, 208);
+}
+.atc-btn {
+  margin-top: 1.5rem;
+  font-size: 1.45rem;
+  width: 10vw;
+  background-color: white;
+  height: 5vh;
+  color: rgb(46, 168, 46);
+  font-weight: 600;
+  border: 2.5px solid rgb(87, 202, 122);
+}
+
+.btn-pdetails {
+  margin-top: 1rem;
+}
+
+.carousel li img {
+  height: auto;
+}
+
+.prod-container {
+  margin-top: 10vh;
+  display: flex;
+  height: 100vh;
+}
+.carousel-control-next-icon {
+  margin-right: 5rem;
+  background-color: grey;
+}
+
+.carousel-control-prev-icon {
+  margin-left: 5rem;
+  background-color: rgb(204, 196, 196);
+}
+/* img {
+  height: auto;
+  max-height:60vh;
+  width:30vw;
+} */
+
+.cc {
+  margin-left: 5rem;
+  max-height: 45vh;
+  max-width: 39vw;
+}
+
+.carousel-indicators {
+  height: 0;
+  width: 0;
+  background: none;
+}
+.pimg-container {
+  height: 100vh;
+  background: white;
+  width: 50%;
+  font-size: 25px;
+  overflow: hidden;
+}
+
+.ptext-container {
+  height: 80vh;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .prod-container {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .atc-btn {
+    margin-top: 1.5rem;
+    font-size: 1.45rem;
+    width: 35vw;
+    background-color: white;
+    height: 5vh;
+    color: rgb(46, 168, 46);
+    font-weight: 600;
+    border: 2.5px solid rgb(87, 202, 122);
+  }
+
+  .pimg-container {
+    width: 100vw;
+    height: 55vh;
+  }
+
+  .cc {
+    margin-left: 1rem;
+    max-height: 30vh;
+    max-width: 94vw;
+  }
+  .ptext-container {
+    width: 100vw;
+    height: 75vh;
+    margin-top: -6rem;
+  }
+  .product-desc {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+}
+
+.btn-pdetails {
+  height: 3.1vh;
+  width: 3.1vh;
+  padding-bottom: 1rem;
+}

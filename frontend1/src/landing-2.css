@@ -1,0 +1,353 @@
+
+@media screen and (max-width:4160px){
+  .three{
+    margin:1rem;
+}
+
+*{
+  max-width:98.5vw;
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    /* max-resolution: top 3rem; */
+    height: auto;
+    margin:1rem;
+  }
+  .landing-container{
+  z-index:-1;  
+  }
+  .child1{
+    flex: 0 1 300px;
+    flex: 1 1 300px;
+    
+  /* border: 1px solid red; */
+
+    background: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+    height: 20rem;
+   
+    margin:1rem;
+  }
+
+  
+  body {
+    font-family: system-ui, serif;
+  }
+
+  .one-img{
+      background-image:url("./images/Computer-Desk.jpg");
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+ 
+      
+ 
+  }
+  .two-img{
+    background-image:url("https://www.rcsdk12.org/cms/lib/NY01001156/Centricity/Domain/4951/graphics-design-training-ontario.png")  ;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    /* background-color: silver; */
+      
+  }
+.head{
+    
+    color: rgb(105, 99, 93);
+    font-size:2.2rem;
+    margin-top:2rem;
+}
+.desc{
+    margin-top:1rem;
+     font-size: 1rem;
+     color:rgb(73, 73, 73);
+     margin:1rem;
+}
+  
+.contact-desc{
+    
+    background-color:rgb(113, 243, 178);
+
+}
+.contact-btn{
+    background:none;
+    height:2rem;
+    width:5rem;
+    margin-top:2rem;
+    border:1.5px solid rgb(56, 187, 121);
+}
+.head{
+
+}
+
+
+  
+  
+.contact-desc2{
+    
+    background-color:rgb(196, 172, 96);
+
+}
+  
+.contact-btn2{
+    background:none;
+    height:2rem;
+    width:5rem;
+    margin-top:2rem;
+    border:1.5px solid rgb(116, 114, 39);
+}
+}
+@media screen and (max-width:769px){
+  .three{
+    margin:1rem;
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    /* max-resolution: top 3rem; */
+    height:auto;
+    margin:1rem;
+  }
+  .landing-container{
+  z-index:-1;  
+  }
+  .child1{
+    flex: 0 1 300px;
+    flex: 1 1 300px;
+    
+  /* border: 1px solid red; */
+
+    background: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+    height: 20rem;
+   
+    margin:1rem;
+  }
+
+  
+  body {
+    font-family: system-ui, serif;
+  }
+
+  .one-img{
+      background-image:url("./images/Computer-Desk.jpg");
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+ 
+      
+ 
+  }
+  .two-img{
+    background-image:url("https://www.rcsdk12.org/cms/lib/NY01001156/Centricity/Domain/4951/graphics-design-training-ontario.png")  ;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    /* background-color: silver; */
+      
+  }
+.head{
+    
+    color: rgb(105, 99, 93);
+    font-size:2.2rem;
+    margin-top:2rem;
+}
+.desc{
+    margin-top:1rem;
+     font-size: 1rem;
+     color:rgb(73, 73, 73);
+     margin:1rem;
+}
+  
+.contact-desc{
+    
+    background-color:rgb(113, 243, 178);
+
+}
+.contact-btn{
+    background:none;
+    height:2rem;
+    width:5rem;
+    margin-top:2rem;
+    border:1.5px solid rgb(56, 187, 121);
+}
+.head{
+
+}
+
+
+  
+  
+.contact-desc2{
+    
+    background-color:rgb(196, 172, 96);
+
+}
+  
+.contact-btn2{
+    background:none;
+    height:2rem;
+    width:5rem;
+    margin-top:2rem;
+    border:1.5px solid rgb(116, 114, 39);
+}
+}
+@media screen and (max-width:480px){
+  .three{
+    margin:1rem;
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    /* max-resolution: top 3rem; */
+    height: auto;
+    margin:1rem;
+  }
+  .landing-container{
+  z-index:-1;  
+  }
+  .child1{
+    flex: 0 1 300px;
+    flex: 1 1 300px;
+    
+    
+  /* border: 1px solid red; */
+
+    background: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+    
+   
+    margin:1rem;
+  }
+
+  
+  body {
+    font-family: system-ui, serif;
+  }
+
+  .one-img{
+      background-image:url("https://www.tcweddings.com.au/wp-content/uploads/2018/09/Pinterest-wedding-planning-tips-Tweed-Coast-Weddings1.jpg");
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+     
+     
+      
+ 
+  }
+  .two-img{
+    background-image:url("https://www.rcsdk12.org/cms/lib/NY01001156/Centricity/Domain/4951/graphics-design-training-ontario.png")  ;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-color: silver;
+    
+      
+  }
+.head{
+    
+    color: rgb(105, 99, 93);
+    font-size:2.2rem;
+    margin-top:2rem;
+}
+.desc{
+    margin-top:1rem;
+     font-size: 1rem;
+     color:rgb(73, 73, 73);
+     margin:1rem;
+}
+  
+.contact-desc{
+    
+    background-color:rgb(113, 243, 178);
+
+}
+.contact-btn{
+    background:none;
+    height:2rem;
+    width:5rem;
+    margin-top:1rem;
+    border:1.5px solid rgb(56, 187, 121);
+}
+.head{
+font-size:1rem;
+}
+.desc{
+  font-size: 15px;
+  text-justify: newspaper;
+}
+
+  
+  
+.contact-desc2{
+    
+    background-color:rgb(196, 172, 96);
+
+}
+  
+.contact-btn2{
+    background:none;
+    height:2rem;
+    width:5rem;
+    margin-top:-2rem;
+    border:1.5px solid rgb(116, 114, 39);
+}
+   
+  
+}
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+

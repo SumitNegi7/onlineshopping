@@ -1,0 +1,376 @@
+html {
+  background-color: rgb(255, 255, 255);
+  font-size: 10px;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+body {
+  font: 1.6rem Helvetica;
+  height: 100vh;
+
+  background-color: rgb(122, 121, 121);
+}
+
+.logomaker {
+  margin-left: 2rem;
+}
+.details-image {
+}
+.product-desc {
+  display: flex;
+  flex-direction: column;
+}
+/*button left to right*/
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background-color: transparent;
+  height: 12rem;
+}
+
+.column div {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: transparent;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 14px 16px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  margin-left: 8vh;
+}
+
+.btn-shop {
+  position: relative;
+
+  top: 50vh;
+  left: 70%;
+  font-size: 1.2rem;
+  border: 2px solid rgb(146, 138, 138);
+  color: rgb(145, 134, 134);
+  background-color: transparent;
+}
+
+/*jfoewfje*/
+
+.btn {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: rgb(44, 41, 41);
+  color: white;
+}
+
+/*carousel image*/
+
+/* i
+/* img {
+  vertical-align: middle;
+} */
+*/
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*sidebar*/
+
+.brand button {
+  font-size: 2.5rem;
+  top: 100;
+  left: 0;
+
+  font-weight: lighter;
+  background: none;
+  border: none;
+  color: slategray;
+
+  cursor: pointer;
+}
+
+.brand button {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.sidebar {
+  position: fixed;
+  transition: all 0.6s;
+  transform: translateX(130vw);
+  width: 30rem;
+  background-color: #ffffff;
+  height: 100%;
+  z-index: 100;
+}
+.sidebar.open {
+  transform: translateX(90vw);
+}
+
+.sidebar-close-button {
+  border-radius: 50%;
+  border: 0.1rem #000000 solid;
+  width: 4rem;
+  background-color: teal;
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 28rem;
+  z-index: 1000;
+  font-weight: 300;
+  color: rgb(231, 220, 220);
+}
+
+/*Product dertails*/
+
+/* cart*/
+
+/* Sign In form */
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem grey solid;
+  border-radius: 0.5rem;
+  list-style-type: none;
+}
+.form-container li {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories {
+  padding: 0;
+  list-style-type: none;
+}
+.categories a {
+  display: flex;
+  padding: 1rem;
+}
+
+.categories a:hover {
+  background-color: #c0c0c0;
+}
+
+#empty {
+  z-index: 1000;
+  background-color: black;
+}
+
+.product-admin-header {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border: 1px solid black;
+  width: 95vw;
+}
+
+th {
+  padding: 1rem;
+  background-color: rgba(7, 82, 126, 0.863);
+}
+td {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid black;
+  background-color: rgb(137, 168, 194);
+}
+
+.product-list {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.create-prod {
+  margin-top: 6rem;
+}
+
+.admin-header {
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3px;
+}
+
+label {
+  width: 10rem;
+}
+input,
+textarea {
+  margin-bottom: 1rem;
+  width: 30vw;
+  height: 5vh;
+  border-bottom: 1px solid black;
+}
+textarea {
+  height: 15vh;
+}
+
+.form-container-admin {
+  display: flex;
+  flex-direction: column;
+}
+.btn-admin {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-create-product {
+  border: green;
+  background-color: rgb(115, 196, 115);
+  color: white;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.btn1 {
+  margin-top: -10rem;
+}
+
+.product-screen {
+  margin-top: -1rem;
+}
