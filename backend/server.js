@@ -10,6 +10,8 @@ import orderRoute from "./routes/orderRoute";
 import Razorpay from "razorpay";
 import shortid from "shortid";
 
+const app = express();
+
 const razorpay = new Razorpay({
   key_id: "rzp_test_ezgLtJPpftmOma",
   key_secret: "mmDbwfcGNR4FPl5M3ei1U9rZ",
@@ -24,8 +26,13 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
-const app = express();
+
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '/../frontend/build')));
+app.get('*', (req, res) => res.sendFile(path.join('${__dirname}/../frontend/build/index.html'));
+
+
+
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/orders", orderRoute);
