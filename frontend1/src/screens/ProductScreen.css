@@ -57,7 +57,9 @@ select {
   max-height: 51vh;
   max-width: 39vw;
 }
-
+.placeorder-btn1{
+  margin-top:3rem;
+}
 .carousel-indicators {
   height: 0;
   width: 0;

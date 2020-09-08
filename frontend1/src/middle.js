@@ -28,7 +28,7 @@ function Middle() {
       </div>
       <div className="card">
         <div className="imgbx">
-          <img src="ref.jpg" alt="hatt" />
+          <img src="desktop.jpg" alt="hatt" />
           <div className="naming">
             <span className="i-name">Desktops</span>
             <Link to="/category/Desktop">
@@ -40,13 +40,13 @@ function Middle() {
           </div>
         </div>
         <div className="content">
-          <p>Product Under 5999/-</p>
+          <p>Desktop Under 19999/-</p>
         </div>
       </div>
 
       <div className="card">
         <div className="imgbx">
-          <img src="desktop.jpg" alt="hatt" />
+          <img className="access-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdE1BnV7KchG8NeSV-xsDMgPGAbml3HhlMgQ&usqp=CAU" alt="hatt" />
           <div className="naming">
             <span className="i-name"> Accessories</span>
             <Link to="/category/Accessories">
@@ -58,12 +58,12 @@ function Middle() {
           </div>
         </div>
         <div className="content">
-          <p> Desktops Under 25000/-</p>
+          <p> Accessories Under 299/-</p>
         </div>
       </div>
       <div className="card">
         <div className="imgbx">
-          <img src="desktop.jpg" alt="hatt" />
+          <img src="ref.jpg" alt="hatt" />
           <div className="naming">
             <span className="i-name">Refurbished</span>
             <Link to="/category/Refubrished">
@@ -75,7 +75,7 @@ function Middle() {
           </div>
         </div>
         <div className="content">
-          <p> Desktops Under 25000/-</p>
+          <p> Products starting at 999/-</p>
         </div>
       </div>
     </div>

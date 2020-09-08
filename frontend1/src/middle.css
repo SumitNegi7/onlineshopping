@@ -3,6 +3,10 @@
     padding: 0;
     
 }
+.access-img{
+ height: 16rem;
+ width: 70vw;
+}
 @media screen and (max-width:4060px){
     .cantainer-1{
     
@@ -40,7 +44,7 @@
     width: 260px;
     height: 260px;
     top:-50px;
-    left:5px; 
+    left:1px; 
     
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
@@ -57,6 +61,9 @@
     color:#111;
     visibility: hidden;
     opacity: 0; 
+    font-weight: 200;
+    font-size: 1.3rem;
+    letter-spacing: 0.6px;
     transition:0.3s ease-in-out;
 
 }
@@ -157,6 +164,7 @@ letter-spacing: 1.5px;
         color:#111;
         visibility: hidden;
         opacity: 0; 
+       
         transition:0.3s ease-in-out;
     
     }
@@ -164,7 +172,7 @@ letter-spacing: 1.5px;
         visibility: visible;
         opacity: 1;
         margin-top: -40px;
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
     }
     
      .card:hover{

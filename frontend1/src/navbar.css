@@ -1,27 +1,18 @@
 .navbar-container {
   width: 100%;
-height:1vh;
+
   /* position: absolute; */
- 
-  background-color:white;
+  margin-top: 2vh;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   /* background-color: blue; */
-
 }
 
 .outer {
-  padding-top: 3vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 8vh;
+  height: 5vh;
   letter-spacing: 1px;
-  background-color:white;
-  z-index:11000;
-  position: fixed; 
-background-color:white;
-width:99%;
-margin-bottom:2vh;
 }
 main {
   /* position: absolute; */
@@ -108,12 +99,13 @@ li {
     left: 0vh;
     right: 10rem;
     height: 95vh;
-    top: 5.1vh;
+    top: 6vh;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  
     width: 60%;
     transform: translateX(-100%);
     transition: transform 0.5s ease-out;

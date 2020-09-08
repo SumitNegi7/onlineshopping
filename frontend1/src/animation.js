@@ -108,7 +108,7 @@ function Animation() {
         </div>
 
         <div className="landing-3">
-          <p className="category"> CATEGORIES</p>
+          <p className="category-landing"> CATEGORIES</p>
         </div>
       </div>
     </Fragment>

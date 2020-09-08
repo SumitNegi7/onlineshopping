@@ -29,7 +29,7 @@ function Landing() {
               service you the some service online{" "}
             </p>
             <Link to="/product">
-              <button className="contact-btn2"> Contact</button>
+              <button className="contact-btn2"> Services</button>
             </Link>
           </div>
           <div class="child1  one-img "></div>

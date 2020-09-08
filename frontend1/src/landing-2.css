@@ -38,8 +38,9 @@
   }
 
   .one-img{
-      background-image:url("./images/Computer-Desk.jpg");
+      background-image:url("https://cnet4.cbsistatic.com/img/Po9KpNbIXFAjhmHWqYfzFqtCNwE=/940x0/2020/01/24/81e5364d-1e9b-4c7d-b6fc-2283f2f6e35f/t-mobile-goto-accessories.png");
       object-fit: cover;
+      
       background-repeat: no-repeat;
       background-position: center;
  
@@ -49,6 +50,8 @@
   .two-img{
     background-image:url("https://www.rcsdk12.org/cms/lib/NY01001156/Centricity/Domain/4951/graphics-design-training-ontario.png")  ;
     object-fit: cover;
+    background-color:rgb(194, 189, 189);
+    background-position: center;
     background-repeat: no-repeat;
     /* background-color: silver; */
       
@@ -61,20 +64,20 @@
 }
 .desc{
     margin-top:1rem;
-     font-size: 1rem;
+     font-size: 1.4rem;
      color:rgb(73, 73, 73);
      margin:1rem;
 }
   
 .contact-desc{
     
-    background-color:rgb(113, 243, 178);
+    background-color:rgb(213, 172, 247);
 
 }
 .contact-btn{
     background:none;
-    height:2rem;
-    width:5rem;
+    height:3rem;
+    width:11.5rem;
     margin-top:2rem;
     border:1.5px solid rgb(56, 187, 121);
 }
@@ -83,7 +86,9 @@
 }
 
 
-  
+  .child1{
+    height:40vh;
+  }
   
 .contact-desc2{
     
@@ -93,8 +98,8 @@
   
 .contact-btn2{
     background:none;
-    height:2rem;
-    width:5rem;
+    height:3rem;
+    width:11.5rem;
     margin-top:2rem;
     border:1.5px solid rgb(116, 114, 39);
 }
@@ -256,7 +261,7 @@
 }
 .desc{
     margin-top:1rem;
-     font-size: 1rem;
+     font-size: 0.6rem;
      color:rgb(73, 73, 73);
      margin:1rem;
 }
@@ -277,8 +282,10 @@
 font-size:1rem;
 }
 .desc{
-  font-size: 15px;
+  font-size: 10px;
+  text-align: justify;
   text-justify: newspaper;
+  padding:4px;
 }
 
   
@@ -291,10 +298,18 @@ font-size:1rem;
   
 .contact-btn2{
     background:none;
-    height:2rem;
-    width:5rem;
+    height:3rem;
+    width:7rem;
     margin-top:-2rem;
     border:1.5px solid rgb(116, 114, 39);
+}
+
+.contact-btn{
+  background:none;
+  height:3rem;
+  width:7rem;
+  margin-top:-2rem;
+  border:1.5px solid rgb(116, 114, 39);
 }
    
   

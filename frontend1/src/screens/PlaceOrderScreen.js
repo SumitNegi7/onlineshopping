@@ -108,17 +108,19 @@ function PlaceOrderScreen(props) {
                 <br />
 
 
-            </div>
-        </div>
-        <div className="placeorder-sub">
-            <h4 className="shipping-det">
-                Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items)
+
+
+                <div className="placeorder-sub">
+                    <h4 className="shipping-det">
+                        Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items)
         :
  {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}Rs<br />
-                <button className="placeorder-btn1 " onClick={placeOrderHandler}>
-                    Place Order
+                        <button className="placeorder-btn1 " onClick={placeOrderHandler}>
+                            Place Order
       </button>
-            </h4>
+                    </h4>
+                </div>
+            </div>
         </div>
 
 
