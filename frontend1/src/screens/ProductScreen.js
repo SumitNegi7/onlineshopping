@@ -16,7 +16,7 @@ function ProductScreen(props) {
 
   useEffect(() => {
     dispatch(detailsProduct(props.match.params.id));
-    return () => {};
+    return () => { };
   }, []);
 
   const handleAddToCart = () => {
@@ -27,85 +27,84 @@ function ProductScreen(props) {
     <>
       {/* <div className="back-to-result">
             <Link to="/"> Back to result</Link>
-
         </div> */}
       {loading ? (
         <div> loading...</div>
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <div className="prod-container">
-          <div className="pimg-container">
-            <Carousel>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100 cc"
-                  src={product.image}
-                  alt="First slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100  cc"
-                  src={product.image1}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100 cc"
-                  src={product.image2}
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-            </Carousel>
-          </div>
-          <div className="ptext-container">
-            <ul className="product-desc">
-              <li>
-                <h4> {product.name} </h4>
-              </li>
+            <div className="prod-container">
+              <div className="pimg-container">
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100 cc"
+                      src={product.image}
+                      alt="First slide"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100  cc"
+                      src={product.image1}
+                      alt="Third slide"
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100 cc"
+                      src={product.image2}
+                      alt="Third slide"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+              <div className="ptext-container">
+                <ul className="product-desc">
+                  <li>
+                    <h4> {product.name} </h4>
+                  </li>
 
-              <li>{<div>{product.description}</div>}</li>
-              {/* </ul>
+                  <li>{<div>{product.description}</div>}</li>
+                  {/* </ul>
                         </div>
                         <div className="deatils-action">
                             <ul className="cart-desc"> */}
-              <li>Price:{product.price}Rs</li>
-              <li>
-                Status:{product.countInStock > 0 ? "In Stock" : "Unavailable"}
-              </li>
-              <li className="qty-prod">
-                <span className="qqty">Qty:</span>
-                <select
-                  value={qty}
-                  onChange={(e) => {
-                    setQty(e.target.value);
-                  }}
-                >
-                  {[...Array(product.countInStock).keys()].map((x) => (
-                    <option key={x + 1} value={x + 1}>
-                      {x + 1}
-                    </option>
-                  ))}
-                </select>{" "}
-              </li>
-              <li>
-                <div className="outer-product-details">
-                  <div className="button-cart">
-                    {product.countInStock > 0 && (
-                      <button className="atc-btn " onClick={handleAddToCart}>
-                        {" "}
+                  <li>Price:{product.price}Rs</li>
+                  <li>
+                    Status:{product.countInStock > 0 ? "In Stock" : "Unavailable"}
+                  </li>
+                  <li className="qty-prod">
+                    <span className="qqty">Qty:</span>
+                    <select
+                      value={qty}
+                      onChange={(e) => {
+                        setQty(e.target.value);
+                      }}
+                    >
+                      {[...Array(product.countInStock).keys()].map((x) => (
+                        <option key={x + 1} value={x + 1}>
+                          {x + 1}
+                        </option>
+                      ))}
+                    </select>{" "}
+                  </li>
+                  <li>
+                    <div className="outer-product-details">
+                      <div className="button-cart">
+                        {product.countInStock > 0 && (
+                          <button className="atc-btn " onClick={handleAddToCart}>
+                            {" "}
                         ADD TO CART{" "}
-                      </button>
-                    )}{" "}
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
+                          </button>
+                        )}{" "}
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
     </>
   );
 }

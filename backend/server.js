@@ -12,10 +12,10 @@ import shortid from "shortid";
 
 const app = express();
 
-const razorpay = new Razorpay({
-  key_id: "rzp_test_ezgLtJPpftmOma",
-  key_secret: "mmDbwfcGNR4FPl5M3ei1U9rZ",
-});
+// const razorpay = new Razorpay({
+//   key_id: "rzp_test_ezgLtJPpftmOma",
+//   key_secret: "mmDbwfcGNR4FPl5M3ei1U9rZ",
+// });
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose
@@ -26,12 +26,7 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
-
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '/../frontend/build')));
-app.get('*', (req, res) => res.sendFile(path.join('${__dirname}/../frontend/build/index.html'));
-
-
 
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
@@ -60,6 +55,18 @@ app.post("/razorpay", async (req, res) => {
     console.log(error);
   }
 });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Step 3
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend1/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend1", "build", "index.html")); // relative path
+  });
+}
 
 app.listen(config.PORT, () => {
   console.log("Server started at http://localhost:5000");

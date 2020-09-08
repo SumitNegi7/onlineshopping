@@ -35,7 +35,7 @@ const ProfileScreen = (props) => {
       setPassword(userInfo.password);
     }
     dispatch(listMyOrders());
-    return () => {};
+    return () => { };
   }, [userInfo]);
 
   return (
@@ -50,7 +50,10 @@ const ProfileScreen = (props) => {
             </>
 
             <div className="container-loginz">
-              <div className="image-loginz"></div>
+              <div className="image-loginz">
+                <img src="https://secure.gravatar.com/avatar/22976cbdb272ff95a121f4ca85ba1d7f.png?d=https://www.meowaround.com/assets/no-gravatar-meow-around-24483b872bfd6e5cd1954267954b3f49fc8b55ec7a3a48481a6510576c1c4550.png&r=PG&s=400"
+                  alt="profile" className="profile-image" />
+              </div>
 
               <div className="content1z">
                 <h1 className="h1-login">Profile</h1>
@@ -90,31 +93,31 @@ const ProfileScreen = (props) => {
         ) : errorOrders ? (
           <div>{errorOrders} </div>
         ) : (
-          <table className="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>DATE</th>
-                <th>TOTAL</th>
-                <th>PAID</th>
-                <th>ACTIONS</th>
-              </tr>
-            </thead>
-            <tbody>
-              {orders.map((order) => (
-                <tr key={order._id}>
-                  <td>{order._id}</td>
-                  <td>{order.createdAt}</td>
-                  <td>{order.totalPrice}</td>
-                  <td>{order.isPaid}</td>
-                  <td>
-                    <Link to={"/order/" + order._id}>DETAILS</Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>DATE</th>
+                    <th>TOTAL</th>
+                    <th>PAID</th>
+                    <th>ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {orders.map((order) => (
+                    <tr key={order._id}>
+                      <td>{order._id}</td>
+                      <td>{order.createdAt}</td>
+                      <td>{order.totalPrice}</td>
+                      <td>{order.isPaid}</td>
+                      <td>
+                        <Link to={"/order/" + order._id}>DETAILS</Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
       </div>
     </div>
   );

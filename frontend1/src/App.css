@@ -13,6 +13,10 @@ body {
           justify-content: center;
 }
 
+.App1{
+  display:grid;
+  grid-template-rows: 100px 5fr 120px;
+}
 
 /* .navbar{
   margin-top:1rem;

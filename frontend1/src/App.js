@@ -19,7 +19,7 @@ import Landing from "./screens/Landing";
 import Profile from "./screens/ProfileScreen";
 import "./navbar.css";
 import ProfileScreen from "./screens/ProfileScreen";
-
+import Footer from "./footer";
 function App(props) {
   const OnNavSlideClick = () => {
     const header1 = document.querySelector(".navbar");
@@ -34,7 +34,7 @@ function App(props) {
       } else {
         link.style.animation = `navlinkfade 0.5s ease forwards ${
           index / 7 + 0.3
-        }s`;
+          }s`;
       }
     });
   };
@@ -59,7 +59,7 @@ function App(props) {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="App1">
         <div className="navbar-container">
           <nav>
             <div class="outer">
@@ -104,11 +104,11 @@ function App(props) {
                 {userInfo ? (
                   <Link to="/profile">{userInfo.name} </Link>
                 ) : (
-                  <Link to="/signin">
-                    {" "}
-                    <ion-icon size="" name="logo-tux"></ion-icon>
-                  </Link>
-                )}
+                    <Link to="/signin">
+                      {" "}
+                      <ion-icon size="" name="logo-tux"></ion-icon>
+                    </Link>
+                  )}
 
                 <Link to="/subcart">
                   <div class="cart-img">
@@ -121,13 +121,13 @@ function App(props) {
             </div>
           </nav>
         </div>
-
+        {/* 
         <aside className="sidebar" onMouseOver={openMenu}>
           <button id="empty" onClick={closeMenu}>
             &#10060;
           </button>
           <Subcart />
-        </aside>
+        </aside> */}
 
         {/* <header className="header">
           <div className="brand">
@@ -138,22 +138,16 @@ function App(props) {
             </Link>
           </div>
           <div className="header-links">
-
             {" "}
-
             {
               userInfo ? <Link to="/profile">{userInfo.name} </Link> :
                 <Link to="/signin" >Sign In
               </Link>
             }
-
             {loc != "cart" ?
-
               <div class="cart-img" onMouseOver={openMenu}>
                 <img src="cart.png" alt="cart" className="bag" /><div className="cart-img1"></div>
               </div>
-
-
               :
               <Link to="/cart">
                 <div class="cart-img" >
@@ -161,14 +155,10 @@ function App(props) {
                 </div>
               </Link>
             }
-
-
           </div>
-
         </header> */}
 
         {/* <aside className="sidebar" onMouseOver={openMenu}>
-
           <button id="empty" onClick={closeMenu}>
             &#10060;
           </button>
@@ -193,6 +183,9 @@ function App(props) {
 
           <Route path="/register" exact component={RegisterScreen} />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </BrowserRouter>
   );

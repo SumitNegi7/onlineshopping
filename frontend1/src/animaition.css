@@ -132,13 +132,13 @@ html body {
     .hero-images
     .hero-images-inner
     .hero-image.girl {
-    top: 2rem;
+   top:2rem;
     right: 6rem;
     width: 40%;
     height: 50%;
   }
   .hero .container .hero-inner .hero-images .hero-images-inner .hero-image.boy {
-    bottom: 4rem;
+    bottom:4rem;
     left: 0px;
     width: 42%;
     height: 60%;

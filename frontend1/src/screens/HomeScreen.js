@@ -35,9 +35,10 @@ function HomeScreen(props) {
 
       <ul className="filter">
         <li className="search-container">
-          <form onSubmit={submitHandler} className="s-con">
+          <form onSubmit={submitHandler} >
             <input
               name="searchKeyword"
+              className="input"
               onChange={(e) => setSearchKeyword(e.target.value)}
             />
             <button className="prod-search" type="submit">
@@ -45,9 +46,10 @@ function HomeScreen(props) {
             </button>
           </form>
         </li>
-        <li>
-          Sort By{" "}
-          <select name="sortOrder" className="sort" onChange={sortHandler}>
+
+        <li className="sort-container">
+          Sort{" "}
+          <select name="sortOrder" className="elect" onChange={sortHandler}>
             <option value="">Newest</option>
             <option value="lowest">Lowest</option>
             <option value="highest">Highest</option>
@@ -59,28 +61,28 @@ function HomeScreen(props) {
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <ul className="products">
-          {products.map((product) => (
-            <li key={product._id}>
-              <div className="lil product">
-                <Link to={"/product/" + product._id}>
-                  <img
-                    className="product-image"
-                    src={product.image}
-                    alt="product"
-                  />
-                </Link>
-                <div className="lil product-brand">{product.brand}</div>
-                <div className="lil product-name">
-                  <Link to={"/product/" + product._id}>{product.name}</Link>
-                </div>
+            <ul className="products">
+              {products.map((product) => (
+                <li key={product._id}>
+                  <div className="lil product">
+                    <Link to={"/product/" + product._id}>
+                      <img
+                        className="product-image"
+                        src={product.image}
+                        alt="product"
+                      />
+                    </Link>
+                    <div className="lil product-brand">{product.brand}</div>
+                    <div className="lil product-name">
+                      <Link to={"/product/" + product._id}>{product.name}</Link>
+                    </div>
 
-                <div className="lil product-price">{product.price}/-Rs</div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
+                    <div className="lil product-price">{product.price}/-Rs</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
     </>
   );
 }
