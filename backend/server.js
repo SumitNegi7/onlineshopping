@@ -61,15 +61,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Step 3
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend1/build"));
 
-app.use(express.static("frontend1/build"));
-
-// app.get("*", (req, res) => {
-
-//   res.sendFile(path.join(__dirname, "frontend1", "build", "index.html")); // relative path
-
-// });
-console.log(path.join(__dirname, "frontend1", "build", "index.html"))
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend1", "build", "index.html")); // relative path
+  });
+}
 
 app.listen(config.PORT, () => {
   console.log("Server started at http://localhost:5000");
