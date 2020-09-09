@@ -1,0 +1,328 @@
+svg {
+    height: 600px;
+    width: 50rem;
+  }
+  .container-rb {
+    height: 55rem;
+  
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .image-new {
+    background: none;
+    height: 250px;
+    transform: rotateX(-15deg);
+    
+  }
+  
+  .abc-rb {
+    position: absolute;
+  }
+  
+  .a-rb {
+    position: relative;
+    top: 8.5rem;
+    left: 1.6rem;
+  }
+  
+ 
+  
+  #mainland {
+    background: url(https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-size: cover, cover;
+    background-position: center, center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+      "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem;
+    font-weight: 400;
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.5s ease, opacity 1s ease;
+  }
+  
+  .is-loading h1 {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  
+  h1:before,
+  h1:after {
+    height: 2px;
+    width: 100%;
+    content: "";
+    background: white;
+    display: block;
+    position: absolute;
+    transition: width 0.4s ease;
+    transition-delay: 0.8s;
+  }
+  
+  h1:before {
+    top: 0;
+    left: 0;
+  }
+  
+  h1:after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .is-loading h1:before,
+  .is-loading h1:after {
+    width: 0;
+  }
+  
+  .web-cam {
+    width: 45rem;
+    height: 520px;
+    border-radius: 125px;
+    z-index: 11;
+    background-color: lightcoral;
+    -webkit-mask-image: url("./blob(1).svg");
+    mask-image: url("./blob(1).svg");
+  }
+  
+  video {
+    width: 1100px;
+    height: 600px;
+    background-repeat: no-repeat;
+  }
+  .Mainland {
+    /* max-width: 99vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 10;
+  }
+  
+  .txt-blob-container {
+    display: flex;
+    width: 65rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-text {
+    color: black;
+    width: 21rem;
+    height: 3rem;
+    line-height: 0.8cm;
+    font-weight: 600;
+    font-size: 2.2rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .inner-video-text {
+    font-size: 1.35rem;
+    line-height: 0cm;
+  
+    font-weight: normal;
+  }
+  
+  .blob-container {
+    display: flex;
+    width: 55rem;
+    align-items: center;
+  }
+  
+  .container-rb {
+    order: 2;
+  }
+  
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .child {
+    flex: 0 1 280px;
+    flex: 1 1 280px;
+  
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+    background-color: pink;
+  
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .ch1:hover {
+    transition: all 0.95s ease;
+    -webkit-transition: all 0.95s ease;
+  
+    background-image: url("https://images.pexels.com/photos/3143791/pexels-photo-3143791.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  }
+  .ch1 {
+    background-image: url("https://images.pexels.com/photos/5083405/pexels-photo-5083405.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+  
+  .btn-img1 {
+    color: white;
+    background: none;
+    border: none;
+    margin-top: 40%;
+  }
+  
+  .ch1:hover .btn-image1 {
+    opacity: 1;
+  }
+  .btn-img1 {
+    color: white;
+    background: none;
+    border: none;
+    margin-top: 40%;
+  }
+  .ch1:hover .btn-image1 {
+    opacity: 1;
+  }
+  .middle {
+    margin-top: 25%;
+    margin-left: 40%;
+    background: none;
+    color: white;
+    height: 100px;
+    width: 100px;
+    border: 1.5px solid #ffff00;
+    border-radius: 50%;
+    opacity: 0;
+    font-size: 12px;
+    transition-delay: 0.5s;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .ch1:hover .middle {
+    transition-delay: 0.5s;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  /* // second */
+  
+  .ch2:hover {
+    transition: all 0.95s ease;
+    -webkit-transition: all 0.95s ease;
+  
+    background-image: url("https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  }
+  .ch2 {
+    background-image: url("https://images.pexels.com/photos/2764678/pexels-photo-2764678.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+  
+  .btn-img2 {
+    color: white;
+    background: none;
+    border: none;
+    margin-top: 40%;
+  }
+  
+  .ch2:hover .btn-img2 {
+    opacity: 1;
+  }
+  .middle2 {
+    margin-top: 25%;
+    margin-left: 40%;
+    background: none;
+    color: white;
+    height: 100px;
+    width: 100px;
+    border: 1.5px solid #ffa07a;
+    border-radius: 50%;
+    opacity: 0;
+    font-size: 12px;
+  }
+  .ch2:hover .middle2 {
+    opacity: 1;
+  }
+  
+  /* // three */
+  
+  .ch3:hover {
+    transition: all 0.95s ease;
+    -webkit-transition: all 0.95s ease;
+  
+    background-image: url("https://images.pexels.com/photos/4300393/pexels-photo-4300393.png?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  }
+  .ch3 {
+    background-image: url("https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+  
+  .btn-img3 {
+    color: white;
+    background: none;
+    border: none;
+    margin-top: 40%;
+  }
+  
+  .ch3:hover .btn-img3 {
+    opacity: 1;
+  }
+  .middle3 {
+    margin-top: 27%;
+    margin-left: 40%;
+    background: none;
+    color: white;
+    height: 100px;
+    width: 100px;
+    border: 1.6px solid orange;
+    border-radius: 50%;
+    opacity: 0;
+    font-size: 14px;
+  }
+  .ch3:hover .middle3 {
+    opacity: 1;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .blob-container {
+      flex-direction: column;
+      width: 20rem;
+    }
+    .txt-blob-container {
+      flex-direction: column;
+  
+      width: 17rem;
+    }
+    img {
+      background: none;
+      height: 150px;
+      transform: rotateX(-15deg);
+      z-index: 1000;
+    }
+    .vt2 {
+      order: 2;
+  
+      margin-top: -10rem;
+      margin-bottom: 5rem;
+    }
+    .container {
+    }
+    svg {
+      height: 500px;
+      width: 25rem;
+    }
+  }
+  

@@ -16,10 +16,20 @@ const Navbar = () => {
       } else {
         link.style.animation = `navlinkfade 0.5s ease forwards ${
           index / 7 + 0.3
-        }s`;
+          }s`;
       }
-    });
-  };
+    })
+
+  }
+  const drop = () => {
+    const box = document.querySelector('.dropdown-content');
+    const btnn = document.querySelector('.dropdown');
+    // const droplinks = document.querySelector('.dropdown-content li');
+
+    box.classList.toggle('navbar-active-half');
+    btnn.classList.toggle('toggle1');
+
+  }
   return (
     <div className="navbar-container">
       <nav>
@@ -33,11 +43,11 @@ const Navbar = () => {
             <div class="logobox">PratapInfotech</div>
           </Link>
           <ul class="navbar ">
-            <div class="dropdown">
+            <div class="dropdown" onClick={drop}>
               <span>
-                <Link to="/product">
-                  <li class="none one">Shop</li>
-                </Link>
+                {/* <Link to="/product"> */}
+                <li class="none one">Shop</li>
+                {/* </Link> */}
               </span>
               <div class="dropdown-content">
                 <Link to="/product/Desktops">

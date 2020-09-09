@@ -1,7 +1,7 @@
 
 @media screen and (max-width:4160px){
   .three{
-    margin:1rem;
+   margin-top: 3rem;
 }
 
 *{
@@ -13,23 +13,25 @@
     justify-content: flex-end;
     /* max-resolution: top 3rem; */
     height: auto;
-    margin:1rem;
+    width:100%;
+    /* margin:1rem; */
+        background-color:pink;
   }
   .landing-container{
   z-index:-1;  
   }
   .child1{
-    flex: 0 1 300px;
+    /* flex: 0 1 300px; */
     flex: 1 1 300px;
     
   /* border: 1px solid red; */
-
+    width: 50vw;
     background: rgb(255, 255, 255);
     font-size: 2rem;
     text-align: center;
     height: 20rem;
    
-    margin:1rem;
+    /* margin:1rem; */
   }
 
   
@@ -40,7 +42,7 @@
   .one-img{
       background-image:url("https://cnet4.cbsistatic.com/img/Po9KpNbIXFAjhmHWqYfzFqtCNwE=/940x0/2020/01/24/81e5364d-1e9b-4c7d-b6fc-2283f2f6e35f/t-mobile-goto-accessories.png");
       object-fit: cover;
-      
+      background-color:rgba(18, 165, 131, 0.74);
       background-repeat: no-repeat;
       background-position: center;
  

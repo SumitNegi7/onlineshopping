@@ -15,15 +15,15 @@ function Footer() {
 
     <div className="footer-container-2">
       <hr />
-      <ul className="footer-content">
+      <lullu className="footer-content">
         <div className="pay">
           <li className="razor">
             {" "}
-            <img src={pay} alt="pay" height="90px" />
+            <img className="razor-pay" src={pay} alt="pay" />
           </li>
         </div>
         <div className="connect">
-          <li>
+          <li className="connect-list">
             CONNECT <br />
             <ion-icon name="logo-facebook"></ion-icon>
             <ion-icon name="logo-instagram"></ion-icon>
@@ -31,7 +31,7 @@ function Footer() {
           </li>
         </div>
         <div className="policy">
-          <li>
+          <li className="policy-li">
             POLICY <br />
             <span className="policy-detail">
               {" "}
@@ -40,7 +40,7 @@ function Footer() {
             </span>
           </li>
         </div>
-      </ul>
+      </lullu>
     </div>
   );
 }

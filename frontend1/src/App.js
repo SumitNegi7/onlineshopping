@@ -11,15 +11,16 @@ import RegisterScreen from "./screens/RegisterScreen";
 import FinalOrder from "./screens/FinalOrder";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { cartReducer } from "./reducers/cartReducers";
+// import { cartReducer } from "./reducers/cartReducers";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import OrderScreen from "./screens/orderScreen";
-import Landing from "./screens/Landing";
-import Profile from "./screens/ProfileScreen";
+// import Landing from "./screens/Landing";
+
 import "./navbar.css";
 import ProfileScreen from "./screens/ProfileScreen";
 import Footer from "./footer";
+import Elanding from "./screens/Elanding";
 function App(props) {
   const OnNavSlideClick = () => {
     const header1 = document.querySelector(".navbar");
@@ -38,12 +39,15 @@ function App(props) {
       }
     });
   };
-  const Pro = () => {
-    const dropp = document.querySelector(".dropdown-content");
-    const content = document.querySelector(".dropdown");
-    dropp.classList.toggle("navbar-active");
-    content.classList.toggle("bc");
-  };
+  // const drop = () => {
+  //   const box = document.querySelector('.dropdown-content');
+  //   const btnn = document.querySelector('.dropdown');
+  //   // const droplinks = document.querySelector('.dropdown-content li');
+
+  //   box.classList.toggle('navbar-active-half');
+  //   btnn.classList.toggle('toggle1');
+
+  // }
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -72,7 +76,7 @@ function App(props) {
                 <div class="logobox">PratapInfotech</div>
               </Link>
               <ul class="navbar ">
-                <div class="dropdown" onClick={Pro}>
+                <div class="dropdown" >
                   <span>
                     <Link to="/product">
                       <li className="none one">
@@ -177,7 +181,7 @@ function App(props) {
           <Route path="/orders" component={OrdersScreen} />
           <Route path="/category/:id" component={HomeScreen} />
           <Route path="/order/:id" component={OrderScreen} />
-          <Route path="/" exact component={Landing} />
+          <Route path="/" exact component={Elanding} />
           <Route path="/subcart" exact component={Subcart} />
           <Route path="/profile" component={ProfileScreen} />
 

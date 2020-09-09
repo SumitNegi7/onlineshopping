@@ -1,10 +1,12 @@
 import React from "react";
 import "./landing-2.css";
-import "./App.css";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 function Landing() {
   return (
-    <div className="landing-container">
+    <div className="landing-container" data-aos="fade-right">
       <div className="three">
         <div class="parent">
           <div class="child1 two-img "></div>
