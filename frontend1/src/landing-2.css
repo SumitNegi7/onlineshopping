@@ -15,7 +15,7 @@
     height: auto;
     width:100%;
     /* margin:1rem; */
-        background-color:pink;
+        
   }
   .landing-container{
   z-index:-1;  
@@ -276,7 +276,7 @@
 .contact-btn{
     background:none;
     height:2rem;
-    width:5rem;
+    width:8rem;
     margin-top:1rem;
     border:1.5px solid rgb(56, 187, 121);
 }
@@ -301,7 +301,7 @@ font-size:1rem;
 .contact-btn2{
     background:none;
     height:3rem;
-    width:7rem;
+    width:9rem;
     margin-top:-2rem;
     border:1.5px solid rgb(116, 114, 39);
 }
@@ -309,7 +309,7 @@ font-size:1rem;
 .contact-btn{
   background:none;
   height:3rem;
-  width:7rem;
+  width:9rem;
   margin-top:-2rem;
   border:1.5px solid rgb(116, 114, 39);
 }
