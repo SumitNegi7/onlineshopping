@@ -163,7 +163,7 @@ svg {
     text-align: center;
   }
   
-  .ch1:hover,.ch1:active {
+  .ch1:hover {
     transition: all 0.95s ease;
     -webkit-transition: all 0.95s ease;
   
@@ -182,7 +182,7 @@ svg {
     margin-top: 40%;
   }
   
-  .ch1:hover .ch1:active.btn-image1 {
+  .ch1:hover .btn-image1 {
     opacity: 1;
   }
   .btn-img1 {
@@ -191,7 +191,7 @@ svg {
     border: none;
     margin-top: 40%;
   }
-  .ch1:hover  .ch1:active.btn-image1 {
+  .ch1:hover .btn-image1 {
     opacity: 1;
   }
   .middle {
@@ -209,7 +209,7 @@ svg {
     transition: all 0.5s ease-in-out;
   }
   
-  .ch1:hover .ch1:active .middle {
+  .ch1:hover .middle {
     transition-delay: 0.5s;
     transition: all 0.5s ease-in-out;
     opacity: 1;
@@ -217,7 +217,7 @@ svg {
   
   /* // second */
   
-  .ch2:hover .ch2:active {
+  .ch2:hover {
     transition: all 0.95s ease;
     -webkit-transition: all 0.95s ease;
   
@@ -236,7 +236,7 @@ svg {
     margin-top: 40%;
   }
   
-  .ch2:hover.ch2:active.btn-img2 {
+  .ch2:hover .btn-img2 {
     opacity: 1;
   }
   .middle2 {
@@ -251,13 +251,13 @@ svg {
     opacity: 0;
     font-size: 12px;
   }
-  .ch2:hover .ch2:active.middle2 {
+  .ch2:hover .middle2 {
     opacity: 1;
   }
   
   /* // three */
   
-  .ch3:hover .ch3:active{
+  .ch3:hover {
     transition: all 0.95s ease;
     -webkit-transition: all 0.95s ease;
   
@@ -277,7 +277,7 @@ svg {
     margin-top: 40%;
   }
   
-  .ch3:hover.ch3:active .btn-img3 {
+  .ch3:hover .btn-img3 {
     opacity: 1;
   }
   .middle3 {
@@ -292,7 +292,7 @@ svg {
     opacity: 0;
     font-size: 14px;
   }
-  .ch3:hover .ch3:active.middle3 {
+  .ch3:hover .middle3 {
     opacity: 1;
   }
   
