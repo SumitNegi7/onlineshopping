@@ -1,6 +1,7 @@
 .placeorder-container1{
  
     display:flex;
+    margin-top:5rem;
     width:100vw;
     justify-content: center;
    
@@ -95,6 +96,7 @@ label{
 .pcart-content1{
     display: flex;
     flex-direction: column;
+    
 }
 
 .placeorder-btn1{
@@ -137,8 +139,11 @@ label{
     }
 
     .placeorder-action1{
-        margin-left:1rem;
-        width: 80vw;
+        margin-left:4.5rem;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        
     }
 
     .placeorder-sub{
@@ -156,7 +161,9 @@ label{
         margin-bottom:6vh;
     }
 
-
+.place-order-details ,.shipping-det{
+    margin-left:2rem ;
+}
 
 .placorder-products1{
     order:2;

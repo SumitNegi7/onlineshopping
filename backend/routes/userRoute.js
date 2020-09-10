@@ -48,6 +48,15 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password: req.body.password,
   });
+
+  const DuplicateUser = await User.findOne({
+    email: req.body.email,
+  });
+
+  if (DuplicateUser) {
+    res.status(401).send({ msg: "User Already exists" });
+  }
+
   const newUser = await user.save();
 
   if (newUser) {

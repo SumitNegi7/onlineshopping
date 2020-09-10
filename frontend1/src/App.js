@@ -86,16 +86,16 @@ function App(props) {
                     </Link>
                   </span>
                   <div class="dropdown-content">
-                    <Link to="/product/Desktops">
+                    <Link to="/category/Desktops">
                       <li className="drop">Desktops</li>
                     </Link>
-                    <Link to="/product/Laptops">
+                    <Link to="/category/Laptops">
                       <li className="drop">Laptop</li>
                     </Link>
-                    <Link to="/product/Accesories">
-                      <li className="drop">Accessries</li>
+                    <Link to="/category/Accessories">
+                      <li className="drop">Accessories</li>
                     </Link>
-                    <Link to="/product/Refubrished">
+                    <Link to="/category/Refubrished">
                       <li className="drop">Refubrished</li>
                     </Link>
                   </div>

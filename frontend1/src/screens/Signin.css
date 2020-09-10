@@ -1,4 +1,30 @@
-@media screen and (max-width:8000px){
+.error-f{
+    color:red;
+    position :relative;
+    top:29rem;
+    left:40rem;
+    font-size:1.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+.password-val-error{
+    color:red;
+    font-size:12px;
+    margin-bottom:1rem;
+}
+
+.password-val-success{
+    color:rgb(47, 100, 12);
+    font-size:12px;
+    margin-bottom:1rem;
+}
+.er-t{
+    z-index:10000;
+    font-size: 3rem;
+
+}
+
     .form{
     margin-top:40vh;
     margin-left:50vw;;
@@ -78,7 +104,7 @@ align-items: center;
     padding: 5px;
     margin-left:4rem;
     margin-bottom:10px;
-    background-color: salmon;
+   
     border:1px solid rgb(155, 146, 146);
     border-radius: 15px;
     font-weight: bold;
@@ -103,9 +129,7 @@ label {
     transition: 0.3s;
 }
 
-.fp:hover {
-    color: #c446c9;
-}
+
 .form-control{
     background-color: rgb(252, 255, 253);
 }
@@ -128,18 +152,11 @@ label {
     text-decoration: none;
     color: white;
 }
-}
+
 
 @media screen and (max-width:767px){
 
-    .form{
-        top: 50%;
-        left: 50%;
-        width: 100vh;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        
-    }
+ 
     
     .container-login {
         display: flex;
@@ -195,12 +212,12 @@ label {
         padding-top: 10px;
         font-family: 'Niconne', cursive;
         font-size: 20px;
-        color: #c446c9;
+       
     }
     
     .form-control{
        
-        width:20rem;
+        width:18rem;
         padding: 1px;
         border: none;
         background-color: rgba(156, 77, 156, 0.3);
@@ -208,7 +225,7 @@ label {
         font-weight: bold;
         font-size: small;
         font-family: 'Montserrat', sans-serif;
-        color: #aa38a4;
+        
         text-align:center;
     }
     
@@ -230,11 +247,7 @@ label {
         font-size: small;
         transition: 0.3s;
     }
-    
-    .fp:hover {
-        color: #c446c9;
-    }
-    
+   
     .btn-signin{
         padding: 10px 40px;
         margin-top: 3rem;

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./elanding.css";
 import lappy from "./greylaptop.png";
 import broll from "./broll.mp4";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Landing from "../landing-2";
@@ -11,8 +12,18 @@ export default function Elanding() {
     }, []);
     return (
         <div className="Mainland">
-            <div id="mainland" class="is-loading">
-                <h1>PratapInfoTech</h1>
+            <div id="mainland" class="is-loading" data-aos="zoom-in">
+
+
+                <div className="btn-first">
+                    <Link to="/product">
+                        <button className="l-btn">
+                            SHOP NOW
+                </button>
+                    </Link>
+                </div>
+
+
             </div>
 
             <div className="txt-blob-container">
@@ -59,22 +70,39 @@ export default function Elanding() {
                 </div>
             </div>
             <div class="parent" data-aos="fade-up">
+
                 <div class="child ch1">
-                    <div class="middle">
-                        <button class="btn-img1">SHOP NOW</button>
-                    </div>
-                </div>
-                <div class="child ch2">
-                    <div class="middle2">
-                        <button class="btn-img2">SHOP NOW</button>
-                    </div>
+                    <Link to="/category/Desktops">
+                        <div class="middle">
+
+                            <button class="btn-img1">SHOP NOW</button>
+
+                        </div>
+                    </Link>
                 </div>
 
-                <div class="child ch3">
-                    <div class="middle3">
-                        <button class="btn-img3">SHOP NOW</button>
-                    </div>
+
+                <div class="child ch2">
+                    <Link to="/category/Laptops">
+                        <div class="middle2">
+
+                            <button class="btn-img2">SHOP NOW</button>
+                        </div>
+                    </Link>
                 </div>
+
+
+
+                <div class="child ch3">
+                    <Link to="/category/Accessories">
+                        <div class="middle3">
+
+                            <button class="btn-img3">SHOP NOW</button>
+
+                        </div>
+                    </Link>
+                </div>
+
 
             </div>
             <div>

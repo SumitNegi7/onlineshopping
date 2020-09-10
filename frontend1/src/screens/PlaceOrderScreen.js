@@ -92,17 +92,17 @@ function PlaceOrderScreen(props) {
 
             <div className="placeorder001">
                 <div className="placeorderinfo">
-                    <div>
-                        <h3 className="shipping-det"> Shipping Details</h3>
 
-                        <div className="place-order-details">
-                            <label for="Name" className="cart-prod">Name</label>{"  "}{cart.shipping.name}<br />
-                            <label for="Phoneno" className="cart-prod">Phoneno</label>    {"  "}{cart.shipping.phoneno}<br />
-                            <label for="Address" className="cart-prod">Address</label>        {"  "}{cart.shipping.address}<br />
-                            <label for="City" className="cart-prod">City</label>      {"  "}{cart.shipping.city}<br />
-                            <label for="Pincode" className="cart-prod">Pincode</label>   {"  "}{cart.shipping.pincode}<br />
-                        </div>
+                    <h3 className="shipping-det"> Shipping Details</h3>
+
+                    <div className="place-order-details">
+                        <label for="Name" className="cart-prod">Name</label>{"  "}{cart.shipping.name}<br />
+                        <label for="Phoneno" className="cart-prod">Phoneno</label>    {"  "}{cart.shipping.phoneno}<br />
+                        <label for="Address" className="cart-prod">Address</label>        {"  "}{cart.shipping.address}<br />
+                        <label for="City" className="cart-prod">City</label>      {"  "}{cart.shipping.city}<br />
+                        <label for="Pincode" className="cart-prod">Pincode</label>   {"  "}{cart.shipping.pincode}<br />
                     </div>
+
                 </div>
                 <br />
                 <br />

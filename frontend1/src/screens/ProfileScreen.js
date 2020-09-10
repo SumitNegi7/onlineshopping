@@ -78,7 +78,7 @@ const ProfileScreen = (props) => {
                 <br />
                 <button
                   onClick={handleLogout}
-                  className="button-secondary full-width"
+                  className="button-profile"
                 >
                   Logout
                 </button>

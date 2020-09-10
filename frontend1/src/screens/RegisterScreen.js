@@ -25,14 +25,18 @@ function RegisterScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(register(name, email, password));
+        if (password === rePassword) {
+            dispatch(register(name, email, password));
+        }
+
     }
+
     return <div className="form">
         <form onSubmit={submitHandler} >
 
             <>
                 {loading && <div>Loading...</div>}
-                {error && <div>{error}</div>}
+                {error && <div><p className="error-f"> Email already Registered</p></div>}
             </>
 
             <div className="container-login">
@@ -47,28 +51,40 @@ function RegisterScreen(props) {
                     <div className="form-group">
 
                         <br />
-                        <input type="text" className="form-control" name="" placeholder="Name" onChange={(e) => setName(e.target.value)} />
+                        <input type="text" className="form-control" name="" placeholder="Name" onChange={(e) => setName(e.target.value)} required />
 
                     </div>
 
                     <div className="form-group">
 
 
-                        <input type="text" className="form-control" name="" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" className="form-control" name="" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
 
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-control" name="" placeholder="Re enter Password" onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" className="form-control" name="" placeholder="Re enter Password" onChange={(e) => setPassword(e.target.value)}
+                            required />
                     </div>
 
                     <div className="form-group">
-                        <input type="password" className="form-control" name="" placeholder="Re enter Password" onChange={(e) => setRePassword(e.target.value)} />
+                        <input type="password" className="form-control" name="" placeholder="Re enter Password" onChange={(e) => setRePassword(e.target.value)}
+                            required />
                     </div>
+
+                    {
+
+                        rePassword.length > 0 ?
+                            password === rePassword ? <div className="password-val-success">Password  match</div>
+                                : <div className="password-val-error"> Password does not Match</div>
+                            : ""
+                    }
 
 
 
                     <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Already have an account? Login</Link>
                     <br />
+
+
                     <button type="submit" className="btn-signin">Sign Up</button>
                 </div>
             </div>
