@@ -1,0 +1,206 @@
+
+.navbar-container{
+  width: 100%;
+}
+
+  .outer{
+    display:flex;
+    justify-content:space-around; 
+    align-items:center;
+    
+    min-height:5vh; 
+  }
+  .logobox {
+  margin-left: 3vh;
+  color: black;
+  font-size: 2rem;
+  font-family: "Satisfy", cursive;
+}
+  ion-icon{
+      font-size:20px;
+  }
+  li{
+    list-style:none;
+  }
+  ul{
+    padding-top:0;
+  }
+
+  .navbar{
+    display:flex;
+    justify-content:center;
+    flex-grow:3;
+    padding-top:0;
+    align-items:center;
+
+  
+  }
+  .navbar1{
+    display:flex;
+    justify-content:space-evenly;
+    margin-right: 3rem;
+    padding-top:0;
+    align-items:center
+  }
+  
+  li{
+    margin-right:5rem;
+  }
+  
+   .handburger{
+   display:none;
+  }
+.handburger div{
+  
+  width: 25px;
+  height: 2px;
+  background-color: rgb(216, 178, 24);
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+.dropdown {
+    float:left;
+ display: block;
+  
+  
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 50000;
+}
+
+.dropdown-content .drop {
+  float: none;
+  color: black;
+  padding: 4px 10px; 
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 5000;
+}
+.dropdown-content .drop:hover {
+  background-color: rgb(189, 28, 28);
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  width: 3rem;
+  }
+
+  .newshop{
+  display: none;
+  }
+  .copy-right{
+    display: none;
+    }
+
+/* --------------navbar-responsive--------------- */
+
+
+ @media (max-width:1024px){
+  .navbar{
+    width: 60%;
+
+  }
+  
+}
+@media (max-width:768px){
+  .outer{
+    background-color:  rgb(255, 255, 255);;
+  }
+  nav{
+      overflow-y: hidden;
+  }
+  .logobox{
+     margin-left: 2rem;
+  }
+  .navbar1{
+  margin-right: 1rem;
+    }
+  .copy-right{
+
+  height: 13vh;
+  width: 50%;
+  margin-top: 15rem;
+  margin-left: -1rem;
+  text-align: center;
+
+  }
+  .copy-right{
+  display: block;
+  }
+  .pcopy{
+  font-size:1.1rem;
+  font-weight: 500;
+  }
+  .siteby{
+  font-size:0.8rem ;
+  }
+  .navbar{
+    /* margin-left: 2rem; */
+    position: absolute;
+    left:0vh;
+    right: 10rem;
+    height: 95vh;
+    top:5.6vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 98%;
+    transform: translateX(-110%);
+    transition: transform 0.5s ease-out;
+    z-index: 5000;
+  }
+  .handburger{
+  display: block;
+  z-index: 1;
+  }
+  .newshop{
+    
+    margin-top:4rem;
+   
+    display: block;
+    text-align: center;
+   
+   }
+   
+  .one{
+  
+    margin-top:5rem ;
+    padding: 4px 8px;
+    font-size: 1.2rem; 
+  }
+  
+ 
+.navbar-active{
+    transform: translateX(0%);
+  }
+  
+  .dropdown{
+  display: none;
+  }
+ 
+  .one-active{
+    transform: translateX(-110%);
+  }
+  
+}
+
+.toggle .line1{
+   transform: rotate(45deg) translate(5px,5px);
+ }
+
+.toggle .line2{
+opacity: 0;
+}
+ 
+.toggle .line3{
+  transform: rotate(-45deg) translate(5px,-5px);
+}
