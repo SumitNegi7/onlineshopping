@@ -19,7 +19,7 @@
     margin-left:4vw;
    
   }
-  
+ 
   .visit-card{
    
     width:25vw;
@@ -41,7 +41,7 @@
     
   }
   
-  img{
+  .img-visit{
    height:auto;
     width:100%;
     
@@ -88,7 +88,7 @@
      
       width:25vw;
       margin:1rem;
-      height:90%;
+      height:50%;
        overflow:hidden;
       
     }
@@ -101,34 +101,47 @@
     
     .v1{
       margin-top:1vh;
-      height:90%;
+      height:40%;
       width:15rem;
     }
     
-    img{
+    .img-visit{
      height:auto;
       width:100%;
       
     }
     .v3{
-      margin-top:-1.5rem;
+    
       display:flex;
-      height: 90%;
-      width:15rem;
+      height: 40%;
+      width:20rem;
+      margin-top: -5rem;
+      z-index:1000;
       flex-direction:column;
       align-items:flex-start;
       justify-content:center;
     }
     .address{
       z-index: 11;
+      width: 20rem;
+      margin-top: -10rem;
     
     }
+    .mdc-button, .mdc-button--outlined{
+      width:30px;
+    }
+    
+    
     .btn-visit{
       background:black;
       
       height:2.2rem;
       color:#F5F5F5;
       font-size:0.9rem;
+    }
+
+    .leading-icon, .mdc-button__ripple,.mdc-button__label,.trailing-icon{
+      width:50px;
     }
 
   }

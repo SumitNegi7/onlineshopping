@@ -33,7 +33,7 @@ function Rpay() {
     //     t.json()
     // )
 
-    const data = await fetch("http://localhost:5006/razorpay", {
+    const data = await fetch("http://localhost:5000/razorpay", {
       method: "POST",
     }).then((t) => t.json());
 

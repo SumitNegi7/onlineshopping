@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import OrderScreen from "./screens/orderScreen";
+import Visit from "./screens/VisitScreen";
 // import Landing from "./screens/Landing";
 
 import "./navbar.css";
@@ -205,6 +206,7 @@ function App(props) {
           <Route path="/" exact component={Elanding} />
           <Route path="/subcart" exact component={Subcart} />
           <Route path="/profile" component={ProfileScreen} />
+          <Route path="/Visit" component={Visit} />
 
           <Route path="/register" exact component={RegisterScreen} />
         </main>
