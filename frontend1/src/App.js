@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import Subcart from "./screens/Subcart";
 import HomeScreen from "./screens/HomeScreen";
@@ -9,18 +9,19 @@ import ProductsScreen from "./screens/ProductsScreen";
 import SignInScreen from "./screens/SigninScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import FinalOrder from "./screens/FinalOrder";
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import {BrowserRouter, Route, Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 // import { cartReducer } from "./reducers/cartReducers";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrdersScreen from "./screens/OrdersScreen";
-import OrderScreen from "./screens/orderScreen";
+import OrderScreen from './screens/orderScreen';
 // import Landing from "./screens/Landing";
 
 import "./navbar.css";
 import ProfileScreen from "./screens/ProfileScreen";
 import Footer from "./footer";
 import Elanding from "./screens/Elanding";
+
 function App(props) {
 
 
@@ -60,7 +61,7 @@ function App(props) {
   // }
 
   const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+  const {userInfo} = userSignin;
   const openMenu = () => {
     document.querySelector(".sidebar").classList.add("open");
     document.querySelector("#empty").classList.add("sidebar-close-button");

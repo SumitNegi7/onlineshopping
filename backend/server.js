@@ -29,9 +29,23 @@ mongoose
 
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  const remoteIp = req.connection.remoteAddress + '://' + req.connection.remotePort;
+  console.log(`${req.method} Request made from ${remoteIp} for route ${req.originalUrl}`);
+  next();
+});
+
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/orders", orderRoute);
+
+app.post("/verification", (req, res) => {
+  const SECRET = '12345678';
+  console.log(SECRET);
+
+  console.log(req.body);
+  res.json({status: 'ok'});
+});
 
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
@@ -58,7 +72,7 @@ app.post("/razorpay", async (req, res) => {
 });
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Step 3
 if (process.env.NODE_ENV === "production") {
