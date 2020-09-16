@@ -17,11 +17,12 @@ import OrdersScreen from "./screens/OrdersScreen";
 import OrderScreen from "./screens/orderScreen";
 import Visit from "./screens/VisitScreen";
 // import Landing from "./screens/Landing";
-
+import OrderPlaced from "./screens/OrderPlaced";
 import "./navbar.css";
 import ProfileScreen from "./screens/ProfileScreen";
 import Footer from "./footer";
 import Elanding from "./screens/Elanding";
+
 function App(props) {
 
 
@@ -134,13 +135,13 @@ function App(props) {
                     </Link>
                   )}
 
-                <Link to="/subcart">
-                  <div class="cart-img">
-                    <div className="cart-img1">
-                      <ion-icon name="cart-outline"></ion-icon>
-                    </div>
+                {/* <Link to="/subcart"> */}
+                <div class="cart-img">
+                  <div className="cart-img1">
+                    <ion-icon name="cart-outline"></ion-icon>
                   </div>
-                </Link>
+                </div>
+                {/* </Link> */}
               </ul>
             </div>
 
@@ -207,7 +208,7 @@ function App(props) {
           <Route path="/subcart" exact component={Subcart} />
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/Visit" component={Visit} />
-
+          <Route path="/orderplaced" exact component={OrderPlaced} />
           <Route path="/register" exact component={RegisterScreen} />
         </main>
         <footer>

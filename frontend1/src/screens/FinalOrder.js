@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useSelector } from 'react-redux';
+
+const CURRENCY = 'INR';
 
 function loadScript(src) {
   return new Promise((resolve) => {
@@ -17,7 +20,8 @@ function loadScript(src) {
 const __DEV__ = document.domain === "localhost";
 
 function Rpay() {
-  const [name, setName] = useState("Mehul");
+  const orderList = useSelector(state => state.orderList);
+  const { order } = orderList;
 
   async function displayRazorpay() {
     const res = await loadScript(
@@ -37,12 +41,12 @@ function Rpay() {
       method: "POST",
     }).then((t) => t.json());
 
-    console.log(data);
+    console.log(orderList);
     const options = {
       key: __DEV__ ? "rzp_test_ezgLtJPpftmOma" : "PRODUCTION_KEY",
-      currency: data.currency,
-      amount: data.amount.toString(),
-      order_id: data.id,
+      currency: CURRENCY,
+      amount: order.totalPrice,
+      order_id: order._id,
       name: "Sumit Negi",
       description: "Thank you for nothing. Please give us some money",
 

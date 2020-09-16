@@ -1,15 +1,16 @@
 import express from "express";
-import { isAuth } from "../utils";
+import {isAuth} from "../utils";
 import Order from "../models/orderModel";
 
 const router = express.Router();
 
 router.get("/mine", isAuth, async (req, res) => {
-  const orders = await Order.find({ user: req.user._id });
+  const orders = await Order.find({user: req.user._id});
   res.send(orders);
 });
+
 router.get("/:id", async (req, res) => {
-  const order = await Order.findOne({ _id: req.params.id });
+  const order = await Order.findOne({_id: req.params.id});
 
   if (order) {
     res.send(order);
@@ -24,13 +25,18 @@ router.get("/", isAuth, async (req, res) => {
 });
 
 router.get("/:id", isAuth, async (req, res) => {
-  const order = await Order.findOne({ _id: req.params.id });
+  const order = await Order.findOne({_id: req.params.id});
 
   if (order) {
     res.send(order);
   } else {
     res.status(404).send("Order not found");
   }
+});
+
+router.get("/pay/:id", isAuth, async (req, res) => {
+  console.log(req.param.id);
+  res.send('OK');
 });
 
 router.post("/", isAuth, async (req, res) => {
@@ -50,9 +56,9 @@ router.post("/", isAuth, async (req, res) => {
     // console.log(newOrderCreated)
     res
       .status(201)
-      .send({ message: "New Order Created", data: newOrderCreated });
+      .send({message: "New Order Created", data: newOrderCreated});
   } catch (error) {
-    res.status(400).send({ message: error.message });
+    res.status(400).send({message: error.message});
   }
 });
 

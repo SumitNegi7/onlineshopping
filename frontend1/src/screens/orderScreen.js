@@ -1,113 +1,169 @@
-import React, { useEffect } from 'react';
-import { addToCart, removeFromCart } from '../actions/cartActions';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { createOrder, detailsOrder } from '../actions/orderActions';
+import React, {useEffect} from 'react';
+import {addToCart, removeFromCart} from '../actions/cartActions';
+import {useDispatch, useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {createOrder, detailsOrder} from '../actions/orderActions';
 import "./orderScreen.css";
+
+const CURRENCY = 'INR';
+
+function loadScript(src) {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
+
+const __DEV__ = document.domain === "localhost";
+
 function OrderScreen(props) {
+  const orderDetails = useSelector(state => state.orderDetails);
+  const {loading, order, error} = orderDetails;
 
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(detailsOrder(props.match.params.id));
-        return () => {
-        };
-    }, []);
+  async function displayRazorpay() {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
 
-    const orderDetails = useSelector(state => state.orderDetails);
-    const { loading, order, error } = orderDetails;
+    if (!res) {
+      alert("Razorpay SDK failed to load. Are you online?");
+      return;
+    }
 
-    return loading ? <div>Loading ...</div> : error ? <div>{error}</div> :
-        <div>
-            <div className="placeorder">
-                <div className="placeorder-info  shipping-design">
-                    <div>
-                        <h3 className="shipping-det m"> Shipping Details</h3>
-                        <div className="place-order-details">
-                            <label for="Name" className="cart-prod-apple">Name</label>{"  "}{order.shipping.name}<br />
-                            <label for="Phoneno" className="cart-prod-apple ">Phoneno</label>    {"  "}{order.shipping.phoneno}<br />
-                            <label for="Address" className="cart-prod-apple">Address</label>        {"  "}{order.shipping.address}<br />
-                            <label for="City" className="cart-prod-apple">City</label>      {"  "}{order.shipping.city}<br />
-                            <label for="Pincode" className="cart-prod-apple">Pincode</label>   {"  "}{order.shipping.pincode}<br />
-                        </div>
+    // const data = await fetch('http://localhost:5000/razorpay', { method: 'POST' }).then((t) =>
+    //     t.json()
+    // )
 
-                    </div>
+    // const data = await fetch(`http://localhost:5000/api/orders/${props.method.id}`, {
+    //   method: "POST",
+    // }).then((t) => t.json());
+
+    console.log(typeof order.totalPrice);
+    const options = {
+      key: __DEV__ ? "rzp_test_ezgLtJPpftmOma" : "PRODUCTION_KEY",
+      currency: CURRENCY,
+      amount: order.totalPrice * 100,
+      // order_id: order._id,
+      name: "Sumit Negi",
+      description: "Thank you for nothing. Please give us some money",
+
+      handler: function (response) {
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature);
+      },
+      prefill: {
+        name: "Sumit Negi",
+      },
+    };
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  }
 
 
-                </div>
-                <div className="placeorder-action">
-                    <ul>
-                        <li>
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(detailsOrder(props.match.params.id));
+    return () => {
+    };
+  }, []);
 
-                        </li>
-                        <li>
-                            <h3>Order Summary</h3>
-                        </li>
-                        <li>
-                            <div>Items</div>
-                            <div>${order.itemsPrice}</div>
-                        </li>
-                        <li>
-                            <div>Shipping</div>
-                            <div>${order.shippingPrice}</div>
-                        </li>
-                        <li>
-                            <div>Tax</div>
-                            <div>${order.taxPrice}</div>
-                        </li>
-                        <li>
-                            <div>Order Total</div>
-                            <div>${order.totalPrice}</div>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                </div>
 
+  return loading ? <div>Loading ...</div> : error ? <div>{error}</div> :
+    <div>
+      <div className="placeorder">
+        <div className="placeorder-info  shipping-design">
+          <div>
+            <h3 className="shipping-det m"> Shipping Details</h3>
+            <div className="place-order-details">
+              <label for="Name" className="cart-prod-apple">Name</label>{"  "}{order.shipping.name}<br />
+              <label for="Phoneno" className="cart-prod-apple ">Phoneno</label>    {"  "}{order.shipping.phoneno}<br />
+              <label for="Address" className="cart-prod-apple">Address</label>        {"  "}{order.shipping.address}<br />
+              <label for="City" className="cart-prod-apple">City</label>      {"  "}{order.shipping.city}<br />
+              <label for="Pincode" className="cart-prod-apple">Pincode</label>   {"  "}{order.shipping.pincode}<br />
             </div>
-            <div className="iline">
-            </div>
-            <ul className="cart-list-container oc-container">
 
-                {
-                    order.orderItems.length === 0 ?
-                        <div>
-                            Cart is empty
-                                </div>
-                        :
-                        order.orderItems.map(item =>
-                            <li className="pcart-content1">
-                                <div className="pcart-image1">
-                                    <img src={item.image} alt="madarchod" height="100px" />
-                                </div>
-                                <div className="pcart-name1">
-                                    <div>
-                                        {item.name}
-                                    </div>
-                                    <div>
-                                        Qty:{item.qty}
-
-
-                                    </div>
-                                </div>
-                                <div className="pcart-price1">
-                                    {item.price}Rs
-
-                                </div>
-                                <br />
-
-                            </li>
-                        )
-                }
-            </ul>
-
-
-
-
-
+          </div>
 
         </div>
+        <div className="placeorder-action">
+          <ul>
+            <li>
 
+            </li>
+            <li>
+              <h3>Order Summary</h3>
+            </li>
+            <li>
+              <div>Items</div>
+              <div>${order.itemsPrice}</div>
+            </li>
+            <li>
+              <div>Shipping</div>
+              <div>${order.shippingPrice}</div>
+            </li>
+            <li>
+              <div>Tax</div>
+              <div>${order.taxPrice}</div>
+            </li>
+            <li>
+              <div>Order Total</div>
+              <div>${order.totalPrice}</div>
+            </li>
+          </ul>
+        </div>
+        <div>
+        </div>
 
+      </div>
+      <div className="iline">
+      </div>
+      <ul className="cart-list-container oc-container">
+
+        {
+          order.orderItems.length === 0 ?
+            <div>
+              Cart is empty
+                                </div>
+            :
+            order.orderItems.map(item =>
+              <li className="pcart-content1">
+                <div className="pcart-image1">
+                  <img src={item.image} alt="madarchod" height="100px" />
+                </div>
+                <div className="pcart-name1">
+                  <div>
+                    {item.name}
+                  </div>
+                  <div>
+                    Qty:{item.qty}
+                  </div>
+                </div>
+                <div className="pcart-price1">
+                  {item.price}Rs
+                </div>
+                <br />
+
+              </li>
+            )
+        }
+      </ul>
+      <a
+        className="App-link"
+        onClick={displayRazorpay}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Donate $5
+        </a>
+    </div>
 }
 
 export default OrderScreen;
