@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {addToCart, removeFromCart} from '../actions/cartActions';
-import {useDispatch, useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
-import {createOrder, detailsOrder} from '../actions/orderActions';
+import React, { useEffect } from 'react';
+import { addToCart, removeFromCart } from '../actions/cartActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { createOrder, detailsOrder, paidOrder } from '../actions/orderActions';
 import "./orderScreen.css";
 
 const CURRENCY = 'INR';
@@ -23,9 +23,13 @@ function loadScript(src) {
 
 const __DEV__ = document.domain === "localhost";
 
+
+
+
 function OrderScreen(props) {
   const orderDetails = useSelector(state => state.orderDetails);
-  const {loading, order, error} = orderDetails;
+  const { loading, order, error } = orderDetails;
+  const dispatch = useDispatch();
 
   async function displayRazorpay() {
     const res = await loadScript(
@@ -56,8 +60,14 @@ function OrderScreen(props) {
 
       handler: function (response) {
         alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
+        if (response.razorpay_payment_id) {
+
+
+          dis()
+          console.log("mmc")
+          props.history.push("/orderplaced")
+
+        }
       },
       prefill: {
         name: "Sumit Negi",
@@ -67,13 +77,18 @@ function OrderScreen(props) {
     paymentObject.open();
   }
 
+  const dis = () => {
+    const isPaid = true
+    dispatch(paidOrder(props.match.params.id, isPaid))
+    console.log(isPaid, "hello")
+  }
 
-  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(detailsOrder(props.match.params.id));
     return () => {
     };
   }, []);
+
 
 
   return loading ? <div>Loading ...</div> : error ? <div>{error}</div> :
@@ -103,25 +118,34 @@ function OrderScreen(props) {
             </li>
             <li>
               <div>Items</div>
-              <div>${order.itemsPrice}</div>
+              <div>{order.itemsPrice}Rs</div>
             </li>
             <li>
               <div>Shipping</div>
-              <div>${order.shippingPrice}</div>
+              <div>{order.shippingPrice}Rs</div>
             </li>
             <li>
-              <div>Tax</div>
-              <div>${order.taxPrice}</div>
+              <div>GST</div>
+              <div>{order.taxPrice}Rs</div>
             </li>
             <li>
               <div>Order Total</div>
-              <div>${order.totalPrice}</div>
+              <div>{order.totalPrice}Rs</div>
             </li>
           </ul>
         </div>
-        <div>
-        </div>
 
+
+      </div>
+      <div className="App-link">
+        <button
+          className="App-link1"
+          onClick={displayRazorpay}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pay Now
+        </button>
       </div>
       <div className="iline">
       </div>
@@ -136,7 +160,7 @@ function OrderScreen(props) {
             order.orderItems.map(item =>
               <li className="pcart-content1">
                 <div className="pcart-image1">
-                  <img src={item.image} alt="madarchod" height="100px" />
+                  <img src={item.image} alt="product-img" height="100px" />
                 </div>
                 <div className="pcart-name1">
                   <div>
@@ -155,14 +179,7 @@ function OrderScreen(props) {
             )
         }
       </ul>
-      <a
-        className="App-link"
-        onClick={displayRazorpay}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Donate $5
-        </a>
+
     </div>
 }
 

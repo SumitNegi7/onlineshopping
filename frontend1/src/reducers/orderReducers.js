@@ -8,6 +8,9 @@ import {
   ORDER_LIST_REQUEST,
   ORDER_LIST_SUCCESS,
   ORDER_LIST_FAIL,
+  ORDER_PAID_REQUEST,
+  ORDER_PAID_SUCCESS,
+  ORDER_PAID_FAILED,
   MY_ORDER_LIST_REQUEST,
   MY_ORDER_LIST_SUCCESS,
   MY_ORDER_LIST_FAIL,
@@ -83,9 +86,25 @@ function orderListReducer(
       return state;
   }
 }
+
+
+
+function orderPaidReducer(state = {}, action) {
+  switch (action.type) {
+    case ORDER_PAID_REQUEST:
+      return { loading: true };
+    case ORDER_PAID_SUCCESS:
+      return { loading: false, userInfo: action.payload };
+    case ORDER_PAID_FAILED:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+}
 export {
   orderCreateReducer,
   orderDetailsReducer,
   orderListReducer,
   myOrderListReducer,
+  orderPaidReducer
 };

@@ -44,7 +44,7 @@ app.post("/verification", (req, res) => {
   console.log(SECRET);
 
   console.log(req.body);
-  res.json({status: 'ok'});
+  res.json({ status: 'ok' });
 });
 
 app.post("/razorpay", async (req, res) => {
@@ -72,7 +72,7 @@ app.post("/razorpay", async (req, res) => {
 });
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Step 3
 if (process.env.NODE_ENV === "production") {
@@ -83,6 +83,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(config.PORT, () => {
-  console.log("Server started at http://localhost:5000");
+app.listen(5002, () => {
+  console.log("Server started at http://localhost:5001");
 });

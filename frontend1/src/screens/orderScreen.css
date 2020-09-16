@@ -1,7 +1,8 @@
 .placeorder{
+    margin-top: 2rem;
     display: flex;
     margin-bottom:5rem;
-    
+    justify-content: center;
     flex-basis: 300px;
 
 }
@@ -24,10 +25,28 @@ display: flex;
 flex-wrap: wrap;
 }
 
+.App-link{
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    padding-top: 1rem;
+}
+
+.App-link1{
+    margin-bottom: 1.5rem;
+
+    background-color: rgb(30, 131, 199);
+    border: 2px solid beige;
+    color: cornsilk;
+    width:14rem;
+    height:4rem;
+}
+
 @media screen and (max-width:767px){
     .placeorder-action{
         display:flex;
         flex-direction: column;
+       
     }
     .m{
         font-size: 0.5rem;

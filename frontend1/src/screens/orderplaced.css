@@ -1,0 +1,43 @@
+.os-container{
+    display:flex;
+     width:100%;
+     height:100vh;
+   }
+   
+   .os-inner{
+     width:100%;
+     display:flex;
+     justify-content:center;
+   }
+   
+   .o2{
+     align-self:center;
+   }
+   
+   .o1{
+     align-self:center;
+   }
+   
+   .tick{
+     height:15rem;
+     margin-right:2rem
+   }
+   
+   
+   @media only screen  and (max-width:767px){
+     
+     .tick{
+     height:4rem;
+     margin-right:0.5rem
+   
+   }
+     .ot1{
+       font-size:12px;
+     } 
+     .ot2{
+       font-size:8px;
+       font-weight:normal;
+     } 
+   }
+   
+   

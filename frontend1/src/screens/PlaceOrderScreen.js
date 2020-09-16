@@ -19,7 +19,7 @@ function PlaceOrderScreen(props) {
     const dispatch = useDispatch();
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
     const shippingPrice = itemsPrice > 100 ? 0 : 10;
-    const taxPrice = 0.15 * itemsPrice;
+    const taxPrice = 0 * itemsPrice;
     const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
 
@@ -60,7 +60,7 @@ function PlaceOrderScreen(props) {
                         <>
                             <li className="pcart-content1">
                                 <div className="pcart-image1">
-                                    <img src={item.image} alt="madarchod" height="100px" />
+                                    <img src={item.image} alt="product-img" height="100px" />
                                 </div>
                                 <div className="pcart-name1">
                                     <div>
