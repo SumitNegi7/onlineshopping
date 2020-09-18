@@ -137,13 +137,13 @@ function App(props) {
                     </Link>
                   )}
 
-                {/* <Link to="/subcart"> */}
-                <div class="cart-img">
-                  <div className="cart-img1">
-                    <ion-icon name="cart-outline"></ion-icon>
+                <Link to="/cart">
+                  <div class="cart-img">
+                    <div className="cart-img1">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </div>
                   </div>
-                </div>
-                {/* </Link> */}
+                </Link>
               </ul>
             </div>
 

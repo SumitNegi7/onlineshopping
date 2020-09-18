@@ -18,7 +18,9 @@ function Landing() {
               satisfatory responsed from its customer. we are Expanding now and
               service you the some service online{" "}
             </p>
-            <button className="contact-btn"> Contact</button>
+            <Link to="/Visit">
+              <button className="contact-btn"> Contact</button>
+            </Link>
           </div>
         </div>
         <div class="parent">
@@ -30,14 +32,14 @@ function Landing() {
               satisfatory responsed from its customer. we are Expanding now and
               service you the some service online{" "}
             </p>
-            <Link to="/product">
+            <Link to="/service">
               <button className="contact-btn2"> Services</button>
             </Link>
           </div>
           <div class="child1  one-img "></div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

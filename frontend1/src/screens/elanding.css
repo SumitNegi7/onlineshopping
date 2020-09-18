@@ -30,7 +30,7 @@ svg {
   width:12rem;
   border:2px solid white;
   box-shadow: 1px 1px 6
-  px 1px;;
+  px 1px;
 }
   
   .abc-rb {
@@ -212,13 +212,13 @@ svg {
     opacity: 1;
   }
   .middle {
-    margin-top: 25%;
+    margin-top: 35%;
     margin-left: 40%;
     background: none;
     color: white;
     height: 100px;
     width: 100px;
-    border: 1.5px solid #ffff00;
+    border: 1.8px solid #ffff00;
     border-radius: 50%;
     opacity: 0;
     font-size: 12px;
@@ -257,13 +257,13 @@ svg {
     opacity: 1;
   }
   .middle2 {
-    margin-top: 25%;
+    margin-top: 33%;
     margin-left: 40%;
     background: none;
     color: white;
     height: 100px;
     width: 100px;
-    border: 1.5px solid #ffa07a;
+    border: 1.8px solid #ffa07a;
     border-radius: 50%;
     opacity: 0;
     font-size: 12px;
@@ -298,19 +298,26 @@ svg {
     opacity: 1;
   }
   .middle3 {
-    margin-top: 27%;
+    margin-top: 35%;
     margin-left: 40%;
     background: none;
     color: white;
     height: 100px;
     width: 100px;
-    border: 1.6px solid orange;
+    border: 1.8px solid orange;
     border-radius: 50%;
     opacity: 0;
     font-size: 14px;
   }
   .ch3:hover .middle3 {
     opacity: 1;
+  }
+  .mobile-shop{
+    opacity: 0;
+    
+  }
+  .mobile-shop1{
+    opacity: 0;
   }
   
   @media screen and (max-width: 767px) {
@@ -358,8 +365,7 @@ svg {
      
       margin-bottom: 8rem;
     }
-    .container {
-    }
+   
     svg {
       height: 370px;
       width: 26rem;
@@ -370,6 +376,28 @@ svg {
       height: 550px;
     
       background-repeat: no-repeat;
+    }
+  
+    .middle,
+    .middle2,
+    .middle3{
+      border: none;
+    }
+    .mobile-shop1{
+      opacity: 1;
+      margin-top: 70%;
+      height:3rem;
+      font-size:2rem;
+      width:12rem;
+      border:1px solid black;
+      box-shadow: 1px 1px 6
+      px 1px;
+
+    }
+    .btn-img1,
+    .btn-img2,
+    .btn-img3{
+      opacity: 0;
     }
   }
   

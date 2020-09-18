@@ -79,6 +79,7 @@ export default function Elanding() {
                                 <button class="btn-img1">SHOP NOW</button>
 
                             </div>
+                            <button class="mobile-shop1" >SHOP NOW</button>
 
                         </div>
                     </Link>
@@ -92,6 +93,7 @@ export default function Elanding() {
                                 <button class="btn-img2">SHOP NOW</button>
 
                             </div>
+                            <button class="mobile-shop1" >SHOP NOW</button>
                         </div>
                     </Link>
                 </div>
@@ -107,7 +109,8 @@ export default function Elanding() {
                                 <button class="btn-img3">SHOP NOW</button>
 
                             </div>
-                        </div>SS
+                            <button class="mobile-shop1">SHOP NOW</button>
+                        </div>
                     </Link>
                 </div>
 
