@@ -1,0 +1,107 @@
+.services-section{
+  background-color:while;
+  background-size: cover;
+  padding: 60px 0;
+  margin-top: -2rem;
+  min-height:80vh;
+  height: auto;
+
+}
+.inner-width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.section-title{
+  text-align: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom:5.5rem;
+ 
+}
+.border{
+  width: 160px;
+  height: 2px;
+  background: #000000;
+  margin: 40px auto;
+}
+.services-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.service-box{
+  max-width: 33.33%;
+  padding: 15px;
+  text-align: center;
+  color: rgb(13, 13, 14);
+  cursor: pointer;
+}
+
+.service-icon{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #888b8b;
+  color: #262c2e;
+  transform: rotate(45deg);
+  margin-bottom: 30px;
+  margin-top: 16px;
+  transition: 0.3s linear;
+}
+.service-icon i{
+  line-height: 70px;
+  transform: rotate(-45deg);
+  font-size: 26px;
+}
+.service-box:hover .service-icon{
+  background: #323435;
+  color: rgb(44, 40, 40);
+}
+.service-title{
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top:0.5rem;
+}
+.service-desc{
+
+  font-size: 18px;
+}
+
+@media screen and (max-width:960px) {
+  .service-box{
+    max-width: 45%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .service-box{
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .service-box{
+    max-width: 100%;
+  }
+}
+
+.fa-support{
+  color:yellow;
+  
+}
+
+.fa-laptop{
+  color:blue;
+}
+
+.fa-desktop{
+  color:green;
+}

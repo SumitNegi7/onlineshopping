@@ -70,36 +70,44 @@ export default function Elanding() {
                 </div>
             </div>
             <div class="parent" data-aos="fade-up">
-
                 <div class="child ch1">
                     <Link to="/category/Desktops">
-                        <div class="middle">
+                        <div class="child ch1">
 
-                            <button class="btn-img1">SHOP NOW</button>
+                            <div class="middle">
+
+                                <button class="btn-img1">SHOP NOW</button>
+
+                            </div>
 
                         </div>
                     </Link>
                 </div>
-
 
                 <div class="child ch2">
                     <Link to="/category/Laptops">
-                        <div class="middle2">
+                        <div class="child ch2">
+                            <div class="middle2">
 
-                            <button class="btn-img2">SHOP NOW</button>
+                                <button class="btn-img2">SHOP NOW</button>
+
+                            </div>
                         </div>
                     </Link>
                 </div>
+
 
 
 
                 <div class="child ch3">
                     <Link to="/category/Accessories">
-                        <div class="middle3">
+                        <div class="child ch3">
+                            <div class="middle3">
 
-                            <button class="btn-img3">SHOP NOW</button>
+                                <button class="btn-img3">SHOP NOW</button>
 
-                        </div>
+                            </div>
+                        </div>SS
                     </Link>
                 </div>
 

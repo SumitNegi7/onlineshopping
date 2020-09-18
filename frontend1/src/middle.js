@@ -28,7 +28,7 @@ function Middle() {
       </div>
       <div className="card">
         <div className="imgbx">
-          <img src="desktop.jpg" alt="hatt" />
+          {/* <img src="desktop.jpg" alt="hatt" /> */}
           <div className="naming">
             <span className="i-name">Desktops</span>
             <Link to="/category/Desktop">

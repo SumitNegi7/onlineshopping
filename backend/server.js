@@ -14,8 +14,8 @@ import path from "path";
 const app = express();
 
 // const razorpay = new Razorpay({
-//   key_id: "rzp_test_ezgLtJPpftmOma",
-//   key_secret: "mmDbwfcGNR4FPl5M3ei1U9rZ",
+//   key_id: "rzp_test_ezgLtJPpftmOma😻 ",
+//   key_secret: "mmDbwfcGNR4FPl5M3ei1U9rZ"
 // });
 
 const mongodbUrl = config.MONGODB_URL;

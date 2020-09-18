@@ -21,7 +21,9 @@ import OrderPlaced from "./screens/OrderPlaced";
 import "./navbar.css";
 import ProfileScreen from "./screens/ProfileScreen";
 import Footer from "./footer";
+import About from "./screens/about";
 import Elanding from "./screens/Elanding";
+import service from "./screens/service";
 
 function App(props) {
 
@@ -107,11 +109,11 @@ function App(props) {
                 <Link to='/Visit'>
                   <li className=" one " onClick={closelink}>Visit Store</li>
                 </Link>
-                <Link>
+                <Link to="/service">
                   <li className=" one " onClick={closelink}>Services</li>
                 </Link>
-                <Link>
-                  <li className="one" onClick={closelink}>Contact</li>
+                <Link to="/About">
+                  <li className="one" onClick={closelink}>About</li>
                 </Link>
                 <div className="copy-right">
                   <p className="pcopy">
@@ -210,6 +212,8 @@ function App(props) {
           <Route path="/Visit" component={Visit} />
           <Route path="/orderplaced" exact component={OrderPlaced} />
           <Route path="/register" exact component={RegisterScreen} />
+          <Route path="/About" exact component={About} />
+          <Route path="/service" exact component={service} />
         </main>
         <footer>
           <Footer />
