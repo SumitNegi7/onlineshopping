@@ -1,10 +1,9 @@
 .parent001 {
     display: flex;
-        margin-right:5vw;
+    margin-right:5vw;
     margin-top:-7.6rem;
     flex-wrap: wrap;
     height:90vh;
-      
     width:98%;
     align-items: center;
     justify-content: center;
@@ -66,3 +65,39 @@ letter-spacing: 1px;;
 color: rgb(253, 235, 235);
 text-shadow: rgb(206, 149, 26) 2px 2px;
 }
+
+@media screen and (max-width:767px){
+
+.parent001{
+  margin-top: 3rem;
+  height:auto;
+  
+}
+  .child002{
+    order:2;
+    margin-top:2rem;
+  }
+
+  .heading001{
+    font-size: 2.3rem;
+    margin:0 5px;
+  }
+.aa{
+  opacity:0;
+  
+}
+
+.camera{
+ width:80%;
+  height:50vh;
+  margin-left: 4rem;
+}
+
+
+
+
+
+
+
+}
+

@@ -6,7 +6,7 @@ function about() {
         <h2 className="aa" >About Us{"  "}🐼</h2>
         <div class=" parent001">
             
-        <div class=" child001">
+        <div class=" child001 child002">
       <div className="bbb">
         <h1 class="heading001">PratapInfotech : Overview </h1>
          
