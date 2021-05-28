@@ -4,6 +4,9 @@ import { isAuth, isAdmin } from "../utils";
 
 const router = express.Router();
 
+/**
+ * Get all products
+ */
 router.get("/", async (req, res) => {
   const category = req.query.category ? { category: req.query.category } : {};
   const searchKeyword = req.query.searchKeyword
@@ -25,6 +28,9 @@ router.get("/", async (req, res) => {
   res.send(products);
 });
 
+/**
+ * Get one product details
+ */
 router.get("/:id", async (req, res) => {
   const products = await Product.findOne({ _id: req.params.id });
   console.log(products);
@@ -58,6 +64,9 @@ router.put("/:id", isAuth, isAdmin, async (req, res) => {
   return res.status(500).send({ message: " Error in Updating Product." });
 });
 
+/**
+ * Delete product
+ */
 router.delete("/:id", isAuth, isAdmin, async (req, res) => {
   const deletedProduct = await Product.findById(req.params.id);
   if (deletedProduct) {

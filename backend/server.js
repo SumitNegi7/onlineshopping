@@ -47,6 +47,9 @@ app.post("/verification", (req, res) => {
   res.json({ status: 'ok' });
 });
 
+/**
+ * Razorpay integration
+ */
 app.post("/razorpay", async (req, res) => {
   const payment_capture = 1;
   const amount = 1000;
@@ -71,7 +74,7 @@ app.post("/razorpay", async (req, res) => {
   }
 });
 
-app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Step 3

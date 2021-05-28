@@ -14,7 +14,6 @@ const getToken = (user) => {
       expiresIn: "30d",
     }
   );
-  console.log(x);
   return x;
 };
 

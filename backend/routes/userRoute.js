@@ -5,6 +5,38 @@ import { getToken } from "../utils";
 
 const router = express.Router();
 
+/**
+ * Register a new user
+ */
+ router.post("/register", async (req, res) => {
+  const user = new User({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+  });
+
+  const DuplicateUser = await User.findOne({
+    email: req.body.email,
+  });
+
+  if (DuplicateUser!==null && DuplicateUser!==undefined) {
+    res.status(401).send({ msg: "User Already exists" });
+  }
+
+  const newUser = await user.save();
+
+  if (newUser) {
+    res.send({
+      _id: newUser.id,
+      name: newUser.name,
+      email: newUser.email,
+      token: getToken(newUser),
+    });
+  } else {
+    res.status(401).send({ msg: "Invalid Data" });
+  }
+});
+
 router.put("/:id", isAuth, async (req, res) => {
   const userId = req.params.id;
   const user = await User.findById(userId);
@@ -39,35 +71,6 @@ router.post("/signin", async (req, res) => {
     });
   } else {
     res.status(401).send({ msg: "Invalid Email or Password" });
-  }
-});
-
-router.post("/register", async (req, res) => {
-  const user = new User({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-  });
-
-  const DuplicateUser = await User.findOne({
-    email: req.body.email,
-  });
-
-  if (DuplicateUser) {
-    res.status(401).send({ msg: "User Already exists" });
-  }
-
-  const newUser = await user.save();
-
-  if (newUser) {
-    res.send({
-      _id: newUser.id,
-      name: newUser.name,
-      email: newUser.email,
-      token: getToken(newUser),
-    });
-  } else {
-    res.status(401).send({ msg: "Invalid Data" });
   }
 });
 
